@@ -5,13 +5,12 @@ import Main from "./components/main";
 require('dotenv').config();
 
 function App() {
-    const [zipcode, setZipcode] = useState('93117');
+    const [zipcode, setZipcode] = useState('');
     const [officials, setOfficials] = useState({});
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
     const url = 'https://www.googleapis.com/civicinfo/v2/';
     const address = `?address=${zipcode}`;
-    const apiKey = `&key=${process.env.CIVIC_API_KEY}`;
-    console.log(apiKey);
+    const apiKey = `&key=${process.env.REACT_APP_CIVIC_API_KEY}`;
 
     useEffect(() => {
         const fetchRepresentatives = async () => {
