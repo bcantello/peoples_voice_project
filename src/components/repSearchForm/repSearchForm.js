@@ -1,5 +1,6 @@
 import React, {useContext, useState} from "react";
 import {UniversalContext} from "../../App";
+import {getElectedOfficials} from "../services/api-helper";
 
 export default function RepSearchForm() {
 	const universalContext = useContext(UniversalContext);
@@ -7,8 +8,17 @@ export default function RepSearchForm() {
 
 	const handleSubmit = e => {
 		e.preventDefault();
-		universalContext.handleZipcodeSubmit(zipInput)
-	}
+		getElectedOfficials(zipInput).then(res => {
+			if (res.status === 200) {
+				universalContext.setOfficials(res);
+				localStorage.setItem('electedOfficials', JSON.stringify(res));
+			} else {
+				console.log('error');
+			}
+		}).catch(e => {
+			return e;
+		});
+	};
 
 	const handleZipChange = e => {
 		const zip = e.target.value;
