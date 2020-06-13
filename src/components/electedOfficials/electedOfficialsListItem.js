@@ -7,11 +7,11 @@ export default function ElectedOfficialsListItem(props) {
 	const handleOfficeClick = () => {
 		localStorage.setItem('officialIndices', props.element.officialIndices);
 		const officialsIndices = localStorage.getItem('officialIndices');
-		if (officialsIndices.length === 1) {
-			history.push('/ellectedofficial');
-		} else {
+		// if (officialsIndices.length === 1) {
+		// 	history.push('/ellectedofficial');
+		// } else {
 			history.push('/office');
-		}
+		// }
 	}
 
 	return (
