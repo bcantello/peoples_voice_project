@@ -2,6 +2,7 @@ import React, {useContext, useState} from "react";
 import {UniversalContext} from "../../App";
 import {getElectedOfficials} from "../services/api-helper";
 import history from "../../history";
+import './repSearchForm.css';
 
 export default function RepSearchForm() {
 	const universalContext = useContext(UniversalContext);
@@ -28,7 +29,7 @@ export default function RepSearchForm() {
 	}
 
 	return (
-		<form onSubmit={handleSubmit}>
+		<form id={'rep-search-form'} onSubmit={handleSubmit}>
 			<div id={'zip-input-container'}>
 				<div>
 					<input
@@ -40,7 +41,7 @@ export default function RepSearchForm() {
 					/>
 				</div>
 			</div>
-			<input className={'rep-search-btn'} type="submit" value="Search"/>
+			<input className={'rep-search-btn'} type="submit" value="Find Representatives"/>
 		</form>
 	);
 };
