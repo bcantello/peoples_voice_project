@@ -1,4 +1,4 @@
-import React, {useState, useEffect, createContext} from 'react';
+import React, {useState, createContext} from 'react';
 import './App.css';
 import Main from "./components/main";
 
@@ -10,7 +10,6 @@ function App() {
         const result = localStorage.getItem('electedOfficials');
         return result ? JSON.parse(result) : {}
     });
-    console.log(officials)
 
     const handleZipcodeSubmit = (zip) => {
         setZipcode(zip);
@@ -18,11 +17,13 @@ function App() {
 
   return (
     <div className="App">
-        <UniversalContext.Provider value={{
+        <UniversalContext.Provider value={
+            {
             handleZipcodeSubmit,
             officials,
             setOfficials
-        }}>
+            }
+        }>
             <Main/>
         </UniversalContext.Provider>
     </div>
