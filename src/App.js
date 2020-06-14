@@ -1,6 +1,7 @@
 import React, {useState, createContext} from 'react';
 import './App.css';
 import Main from "./components/main";
+import Header from "./components/navigation/header";
 
 require('dotenv').config();
 
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <div className="App">
+        <Header/>
         <UniversalContext.Provider value={
             {
             handleZipcodeSubmit,
