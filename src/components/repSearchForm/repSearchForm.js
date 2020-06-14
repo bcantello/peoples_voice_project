@@ -40,5 +40,5 @@ export default function RepSearchForm() {
 			</div>
 			<input className={'rep-search-btn'} type="submit" value="Search"/>
 		</form>
-	)
+	);
 };

@@ -10,7 +10,7 @@ export default function Main() {
 			<Route exact path="/" component={Home}/>
 			<Route exact path="/home" component={Home}/>
 			<Route exact path="/office" component={OfficeList}/>
-			<Route exact path="/ellectedofficial" component={ElectedOfficialDetails}/>
+			<Route exact path="/official" component={ElectedOfficialDetails}/>
 			<Redirect to='/home'/>
 		</Switch>
 	);

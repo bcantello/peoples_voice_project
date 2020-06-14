@@ -1,10 +1,10 @@
 import React, {useContext} from "react";
 import {UniversalContext} from "../../../App";
+import '../electedOfficials.css';
 
 export default function ElectedOfficialDetails() {
 	const universalContext = useContext(UniversalContext);
 	const official = universalContext.officials.data.officials[localStorage.getItem('officialIndex')];
-	console.log(official);
 	let officialData = [];
 
 	if (official.name !== undefined) {
@@ -34,7 +34,36 @@ export default function ElectedOfficialDetails() {
 
 	if (official.channels !== undefined) {
 		for (let i = 0; i < official.channels.length; i++) {
-			officialData.push(<div className={'official-social'}>{official.channels[i].type}: {official.channels[i].id}</div>)
+			if (official.channels[i].type === "Facebook") {
+				officialData.push(
+					<div className={'official-social'}>{official.channels[i].type}:
+						<a href={`https://www.facebook.com/${official.channels[i].id}`}
+						   target="_blank"
+						   rel="nofollow noopener noreferrer"> {official.channels[i].id}
+						</a>
+					</div>
+				);
+			}
+			if (official.channels[i].type === "Twitter") {
+				officialData.push(
+					<div className={'official-social'}>{official.channels[i].type}:
+						<a href={`https://twitter.com/${official.channels[i].id}`}
+						   target="_blank"
+						   rel="nofollow noopener noreferrer"> {official.channels[i].id}
+						</a>
+					</div>
+				);
+			}
+			if (official.channels[i].type === "YouTube") {
+				officialData.push(
+					<div className={'official-social'}>{official.channels[i].type}:
+						<a href={`https://www.youtube.com/user/${official.channels[i].id}`}
+						   target="_blank"
+						   rel="nofollow noopener noreferrer"> {official.channels[i].id}
+						</a>
+					</div>
+				);
+			}
 		}
 	}
 
