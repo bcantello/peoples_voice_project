@@ -1,7 +1,3 @@
-#official-image {
-    height: 20em;
-}
-
 .officials-search-results-wrapper {
     max-width: 1200px;
     width: 70%;
@@ -25,4 +21,46 @@
 
 .elected-office:hover {
     color: blue;
+}
+
+.official-details-wrapper {
+    max-width: 1200px;
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px 0;
+    border: solid 1px black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 5px rgba(212, 211, 211, 0.71);;
+}
+
+.official-name-container {
+    font-size: 1.5em;
+    padding-bottom: 1em;
+}
+
+.official-details-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+
+.official-details {
+    line-height: 1.5em;
+    text-align: left;
+}
+
+#official-email {
+    text-decoration: none;
+}
+
+#official-website {
+    text-decoration: none;
+}
+
+.official-social {
+    text-decoration: none;
+}
+
+#official-image {
+    height: 20em;
 }
