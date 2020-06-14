@@ -1,6 +1,7 @@
 import React, {useContext, useState} from "react";
 import {UniversalContext} from "../../App";
 import {getElectedOfficials} from "../services/api-helper";
+import history from "../../history";
 
 export default function RepSearchForm() {
 	const universalContext = useContext(UniversalContext);
@@ -12,6 +13,7 @@ export default function RepSearchForm() {
 			if (res.status === 200) {
 				universalContext.setOfficials(res);
 				localStorage.setItem('electedOfficials', JSON.stringify(res));
+				history.push('/electedOffices');
 			} else {
 				console.log('error');
 			}

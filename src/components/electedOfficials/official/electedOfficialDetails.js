@@ -68,6 +68,6 @@ export default function ElectedOfficialDetails() {
 	}
 
 	return (
-		<>{officialData}</>
+		<div className={'official-details-container'}>{officialData}</div>
 	);
 };
