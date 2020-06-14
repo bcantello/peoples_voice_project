@@ -1,3 +1,28 @@
 #official-image {
     height: 20em;
 }
+
+.officials-search-results-wrapper {
+    max-width: 1200px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.user-city {
+    font-size: 1.5em;
+    padding-bottom: 1em;
+}
+
+.elected-offices-wrapper {
+    text-align: left;
+    line-height: 1.5em;
+}
+
+.elected-office {
+    cursor: pointer;
+    color: black;
+}
+
+.elected-office:hover {
+    color: blue;
+}

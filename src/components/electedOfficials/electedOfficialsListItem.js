@@ -14,8 +14,8 @@ export default function ElectedOfficialsListItem(props) {
 	}
 
 	return (
-		<div>
-			<div onClick={handleOfficeClick}>{props.element.name}</div>
+		<div className={'elected-office-container'}>
+			<span className={'elected-office'} onClick={handleOfficeClick}>{props.element.name}</span>
 		</div>
 	);
 };

@@ -12,7 +12,6 @@ export default function OfficeListItem(props) {
 	}
 
 	return (
-
 		<div onClick={handleOfficialClick}>{official}</div>
 	);
 };
