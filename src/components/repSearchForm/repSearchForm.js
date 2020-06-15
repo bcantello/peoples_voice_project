@@ -17,12 +17,8 @@ export default function RepSearchForm() {
 	let streetAddress = "";
 	for (let i = 0; i < addressArr.length; i++) {
 		streetAddress = streetAddress + addressArr[i] + '%20';
-		console.log(streetAddress);
 	}
-	console.log(addressArr);
-
 	const address = `${streetAddress}${userAddress.city}%20${userAddress.state}%20${userAddress.zip}`
-	console.log("WHAT IS THIS?",address);
 
 	const handleSubmit = e => {
 		e.preventDefault();
@@ -46,9 +42,10 @@ export default function RepSearchForm() {
 	};
 
 	return (
-		<form id={'rep-search-form'} onSubmit={handleSubmit}>
-			<div id={'address-form-container'}>
-				<div>
+		<div className={'address-form-container'}>
+			<div className={'address-form'}>
+				<div className={'address-form-title'}><h1>Representative Search</h1></div>
+				<form className={'rep-search-form'} onSubmit={handleSubmit}>
 					<input
 						className="address-form-field"
 						type="text"
@@ -81,10 +78,10 @@ export default function RepSearchForm() {
 						value={userAddress.zip}
 						onChange={handleAddressChange} required
 					/>
-				</div>
+					<button className="address-form-button" type="submit">Search</button>
+					<div id={'error-response'}></div>
+				</form>
 			</div>
-			<button className="address-form-button" type="submit">Find Representatives</button>
-			<div id={'error-response'}></div>
-		</form>
+		</div>
 	);
 };
