@@ -2,6 +2,7 @@ import React, {useState, createContext} from 'react';
 import './App.css';
 import Main from "./components/main";
 import Header from "./components/navigation/header";
+import Footer from "./components/navigation/footer";
 
 require('dotenv').config();
 
@@ -18,16 +19,21 @@ function App() {
 
   return (
     <div className="App">
+        <body>
         <Header/>
-        <UniversalContext.Provider value={
-            {
-            handleZipcodeSubmit,
-            officials,
-            setOfficials
-            }
-        }>
-            <Main/>
-        </UniversalContext.Provider>
+        <div className={'content'}>
+            <UniversalContext.Provider value={
+                {
+                    handleZipcodeSubmit,
+                    officials,
+                    setOfficials
+                }
+            }>
+                <Main/>
+            </UniversalContext.Provider>
+        </div>
+        <Footer/>
+        </body>
     </div>
   );
 }
