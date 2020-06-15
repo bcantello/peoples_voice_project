@@ -19,17 +19,21 @@ function App() {
 
   return (
     <div className="App">
+        <body>
         <Header/>
-        <UniversalContext.Provider value={
-            {
-            handleZipcodeSubmit,
-            officials,
-            setOfficials
-            }
-        }>
-            <Main/>
-        </UniversalContext.Provider>
+        <div className={'content'}>
+            <UniversalContext.Provider value={
+                {
+                    handleZipcodeSubmit,
+                    officials,
+                    setOfficials
+                }
+            }>
+                <Main/>
+            </UniversalContext.Provider>
+        </div>
         <Footer/>
+        </body>
     </div>
   );
 }
