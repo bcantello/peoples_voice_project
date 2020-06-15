@@ -14,7 +14,7 @@ export default function OfficeList() {
 
 	return (
 		<div>
-			<div id={'office-name'}>{localStorage.getItem('office')}s Representing {localStorage.getItem('state')}</div>
+			<div id={'office-name'}>{localStorage.getItem('office')}s</div>
 			<div>{electedOfficialArray}</div>
 		</div>
 	);

@@ -13,7 +13,6 @@ export default function ElectedOfficialsList() {
 	if (universalContext.officials.data !== undefined) {
 		city = data.normalizedInput.city;
 		state = data.normalizedInput.state;
-		localStorage.setItem('state', state);
 		zip = data.normalizedInput.zip;
 		electedOffices = data.offices.map((e, index) => {
 			return (
