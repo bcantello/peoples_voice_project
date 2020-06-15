@@ -9,3 +9,7 @@ nav div {
     padding: 1em 1.5em;
     font-size: 1.25em;
 }
+
+.footer a {
+    text-decoration: none;
+}

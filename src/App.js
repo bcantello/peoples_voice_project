@@ -2,6 +2,7 @@ import React, {useState, createContext} from 'react';
 import './App.css';
 import Main from "./components/main";
 import Header from "./components/navigation/header";
+import Footer from "./components/navigation/footer";
 
 require('dotenv').config();
 
@@ -28,6 +29,7 @@ function App() {
         }>
             <Main/>
         </UniversalContext.Provider>
+        <Footer/>
     </div>
   );
 }
