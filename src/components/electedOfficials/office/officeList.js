@@ -1,5 +1,6 @@
 import React from "react";
 import OfficeListItem from "./officeListItem";
+import '../electedOfficials.css';
 
 export default function OfficeList() {
 	const officialsIndices = localStorage.getItem('officialIndices');
@@ -12,6 +13,9 @@ export default function OfficeList() {
 	});
 
 	return (
-		<div>{electedOfficialArray}</div>
+		<div>
+			<div id={'office-name'}>{localStorage.getItem('office')}s</div>
+			<div>{electedOfficialArray}</div>
+		</div>
 	);
 };

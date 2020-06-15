@@ -1,6 +1,7 @@
 import React, {useContext} from "react";
 import history from "../../../history";
 import {UniversalContext} from "../../../App";
+import '../electedOfficials.css';
 
 export default function OfficeListItem(props) {
 	const universalContext = useContext(UniversalContext);
@@ -12,7 +13,8 @@ export default function OfficeListItem(props) {
 	}
 
 	return (
-
-		<div onClick={handleOfficialClick}>{official}</div>
+		<div>
+			<div className={'elected-official'} onClick={handleOfficialClick}>{official}</div>
+		</div>
 	);
 };
