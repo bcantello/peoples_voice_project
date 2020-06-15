@@ -6,42 +6,85 @@ import './repSearchForm.css';
 
 export default function RepSearchForm() {
 	const universalContext = useContext(UniversalContext);
-	const [zipInput, setZipInput] = useState('');
+	const [userAddress, setUserAddress] = useState({
+		address: "",
+		city: "",
+		state: "",
+		zip: "",
+	});
+
+	const addressArr = userAddress.address.split(' ');
+	let streetAddress = "";
+	for (let i = 0; i < addressArr.length; i++) {
+		streetAddress = streetAddress + addressArr[i] + '%20';
+		console.log(streetAddress);
+	}
+	console.log(addressArr);
+
+	const address = `${streetAddress}${userAddress.city}%20${userAddress.state}%20${userAddress.zip}`
+	console.log("WHAT IS THIS?",address);
 
 	const handleSubmit = e => {
 		e.preventDefault();
-		getElectedOfficials(zipInput).then(res => {
+		getElectedOfficials(address).then(res => {
 			if (res.status === 200) {
 				universalContext.setOfficials(res);
 				localStorage.setItem('electedOfficials', JSON.stringify(res));
 				history.push('/electedOffices');
 			} else {
-				console.log('error');
+				document.getElementById('error-response')
+					.innerHTML = "Invalid address. Please ensure all fields are filled out correctly"
 			}
 		}).catch(e => {
 			return e;
 		});
 	};
 
-	const handleZipChange = e => {
-		const zip = e.target.value;
-		setZipInput(zip);
-	}
+	const handleAddressChange = e => {
+		const {name, value} = e.target;
+		setUserAddress({...userAddress, [name]: value});
+	};
 
 	return (
 		<form id={'rep-search-form'} onSubmit={handleSubmit}>
-			<div id={'zip-input-container'}>
+			<div id={'address-form-container'}>
 				<div>
 					<input
-						className="zip-field"
+						className="address-form-field"
 						type="text"
+						name={'address'}
+						placeholder={'Address'}
+						value={userAddress.address}
+						onChange={handleAddressChange} required
+					/>
+					<input
+						className="address-form-field"
+						type="text"
+						name={'city'}
+						placeholder={'City'}
+						value={userAddress.city}
+						onChange={handleAddressChange} required
+					/>
+					<input
+						className="address-form-field"
+						type="text"
+						name={'state'}
+						placeholder={'State'}
+						value={userAddress.state}
+						onChange={handleAddressChange} required
+					/>
+					<input
+						className="address-form-field"
+						type="text"
+						name={'zip'}
 						placeholder={'Zipcode'}
-						value={zipInput}
-						onChange={handleZipChange}
+						value={userAddress.zip}
+						onChange={handleAddressChange} required
 					/>
 				</div>
 			</div>
-			<input className={'rep-search-btn'} type="submit" value="Find Representatives"/>
+			<button className="address-form-button" type="submit">Find Representatives</button>
+			<div id={'error-response'}></div>
 		</form>
 	);
 };
