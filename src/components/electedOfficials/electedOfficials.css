@@ -14,12 +14,27 @@
     line-height: 1.5em;
 }
 
+#office-name {
+    font-size: 1.5em;
+    padding: 2em;
+}
+
 .elected-office {
     cursor: pointer;
     color: black;
 }
 
 .elected-office:hover {
+    color: blue;
+}
+
+.elected-official {
+    cursor: pointer;
+    color: black;
+    line-height: 1.5em;
+}
+
+.elected-official:hover {
     color: blue;
 }
 
