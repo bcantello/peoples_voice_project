@@ -2,8 +2,18 @@ body, html {
   text-align: center;
   display: flex;
   flex-direction: column;
+  width: 100vw;
 }
 
 .content {
   min-height: calc(100vh - 125px);
+}
+
+.App::-webkit-scrollbar {
+  display: none;
+}
+
+.App {
+  -ms-overflow-style: none;
+  overflow-x: hidden;
 }
