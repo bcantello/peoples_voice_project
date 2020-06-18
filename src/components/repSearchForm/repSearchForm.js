@@ -1,6 +1,6 @@
 import React, {useContext, useState} from "react";
 import {UniversalContext} from "../../App";
-import {getElectedOfficials} from "../services/api-helper";
+import {getElectedOfficials} from "../services/civic-api-helper";
 import history from "../../history";
 import './repSearchForm.css';
 

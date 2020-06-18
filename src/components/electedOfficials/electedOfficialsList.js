@@ -26,5 +26,5 @@ export default function ElectedOfficialsList() {
 			<div className={'user-city'}>Elected Officials For: {city} {state}, {zip}</div>
 			<div className={'elected-offices-wrapper'}>{electedOffices}</div>
 		</div>
-	)
+	);
 }
