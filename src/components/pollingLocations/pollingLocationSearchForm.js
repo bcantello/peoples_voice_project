@@ -1,10 +1,10 @@
 import React, {useContext, useState} from "react";
 import {UniversalContext} from "../../App";
-import {getElectedOfficials} from "../services/civic-api-helper";
+import {getPollingLocations} from "../services/civic-api-helper";
 import history from "../../history";
-import './repSearchForm.css';
+import '../electedOfficials/repSearchForm/repSearchForm.css';
 
-export default function RepSearchForm() {
+export default function PollingLocationsSearchForm() {
 	const universalContext = useContext(UniversalContext);
 	const [userAddress, setUserAddress] = useState({
 		address: "",
@@ -13,20 +13,13 @@ export default function RepSearchForm() {
 		zip: "",
 	});
 
-	const addressArr = userAddress.address.split(' ');
-	let streetAddress = "";
-	for (let i = 0; i < addressArr.length; i++) {
-		streetAddress = streetAddress + addressArr[i] + '%20';
-	}
-	const address = `${streetAddress}${userAddress.city}%20${userAddress.state}%20${userAddress.zip}`
-
 	const handleSubmit = e => {
 		e.preventDefault();
-		getElectedOfficials(address).then(res => {
+		getPollingLocations(universalContext.addressFormatter).then(res => {
 			if (res.status === 200) {
-				universalContext.setOfficials(res);
-				localStorage.setItem('electedOfficials', JSON.stringify(res));
-				history.push('/electedOffices');
+				universalContext.setPollingLocations(res);
+				localStorage.setItem('pollingLocations', JSON.stringify(res));
+				history.push('/pollingLocations');
 			} else {
 				document.getElementById('error-response')
 					.innerHTML = "Invalid address. Please ensure all fields are filled out correctly"
@@ -44,7 +37,7 @@ export default function RepSearchForm() {
 	return (
 		<div className={'address-form-container'}>
 			<div className={'address-form'}>
-				<div className={'address-form-title'}><h1>Representative Search</h1></div>
+				<div className={'address-form-title'}><h1>Polling Location Search</h1></div>
 				<form className={'rep-search-form'} onSubmit={handleSubmit}>
 					<input
 						className="address-form-field"

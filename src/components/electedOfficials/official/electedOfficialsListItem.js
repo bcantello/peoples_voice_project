@@ -1,6 +1,6 @@
 import React from "react";
-import history from "../../history";
-import './electedOfficials.css';
+import history from "../../../history";
+import '../electedOfficials.css';
 
 export default function ElectedOfficialsListItem(props) {
 

@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import ElectedOfficialsListItem from "./electedOfficialsListItem";
-import {UniversalContext} from "../../App";
+import {UniversalContext} from "../../../App";
 
 export default function ElectedOfficialsList() {
 	const universalContext = useContext(UniversalContext);

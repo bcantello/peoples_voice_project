@@ -7,15 +7,23 @@ import Footer from "./components/navigation/footer";
 require('dotenv').config();
 
 function App() {
-    const [zipcode, setZipcode] = useState('');
     const [officials, setOfficials] = useState(() => {
         const result = localStorage.getItem('electedOfficials');
         return result ? JSON.parse(result) : {}
     });
+    const [pollingLocations, setPollingLocations] = useState(() => {
+        const result = localStorage.getItem('pollingLocations');
+        return result ? JSON.parse(result) : {}
+    });
 
-    const handleZipcodeSubmit = (zip) => {
-        setZipcode(zip);
-    };
+    const addressFormatter = (userAddress) => {
+        const addressArr = userAddress.address.split(' ');
+        let streetAddress = "";
+        for (let i = 0; i < addressArr.length; i++) {
+            streetAddress = streetAddress + addressArr[i] + '%20';
+        }
+        return `${streetAddress}${userAddress.city}%20${userAddress.state}%20${userAddress.zip}`
+    }
 
   return (
     <div className="App">
@@ -24,9 +32,11 @@ function App() {
         <div className={'content'}>
             <UniversalContext.Provider value={
                 {
-                    handleZipcodeSubmit,
                     officials,
-                    setOfficials
+                    setOfficials,
+                    pollingLocations,
+                    setPollingLocations,
+                    addressFormatter
                 }
             }>
                 <Main/>
