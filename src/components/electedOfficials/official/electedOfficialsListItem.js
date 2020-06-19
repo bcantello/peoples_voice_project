@@ -6,12 +6,12 @@ export default function ElectedOfficialsListItem(props) {
 
 	const handleOfficeClick = () => {
 		if (props.element.officialIndices.length === 1) {
-			localStorage.setItem('officialIndex', props.element.officialIndices);
-			localStorage.setItem('office', props.element.name)
+			sessionStorage.setItem('officialIndex', props.element.officialIndices);
+			sessionStorage.setItem('office', props.element.name)
 			history.push('/official');
 		} else {
-			localStorage.setItem('officialIndices', props.element.officialIndices);
-			localStorage.setItem('office', props.element.name)
+			sessionStorage.setItem('officialIndices', props.element.officialIndices);
+			sessionStorage.setItem('office', props.element.name)
 			history.push('/office');
 		}
 	}

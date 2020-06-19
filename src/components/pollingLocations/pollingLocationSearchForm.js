@@ -12,22 +12,24 @@ export default function PollingLocationsSearchForm() {
 		state: "",
 		zip: "",
 	});
+	const address = universalContext.addressFormatter(userAddress);
 
 	const handleSubmit = e => {
 		e.preventDefault();
-		getPollingLocations(universalContext.addressFormatter).then(res => {
+		getPollingLocations(address).then(res => {
 			if (res.status === 200) {
 				universalContext.setPollingLocations(res);
-				localStorage.setItem('pollingLocations', JSON.stringify(res));
+				sessionStorage.setItem('pollingLocations', JSON.stringify(res));
 				history.push('/pollingLocations');
 			} else {
 				document.getElementById('error-response')
-					.innerHTML = "Invalid address. Please ensure all fields are filled out correctly"
+					.innerHTML = "Either an incorrect address was entered, or there are no upcoming elections for this location."
 			}
 		}).catch(e => {
 			return e;
 		});
 	};
+	console.log(JSON.parse(sessionStorage.getItem('pollingLocations')));
 
 	const handleAddressChange = e => {
 		const {name, value} = e.target;

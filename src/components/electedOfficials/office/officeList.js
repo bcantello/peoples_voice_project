@@ -3,7 +3,7 @@ import OfficeListItem from "./officeListItem";
 import '../electedOfficials.css';
 
 export default function OfficeList() {
-	const officialsIndices = localStorage.getItem('officialIndices');
+	const officialsIndices = sessionStorage.getItem('officialIndices');
 	const indiceArr = officialsIndices.split(',');
 
 	const electedOfficialArray = indiceArr.map((e, index) => {
@@ -14,7 +14,7 @@ export default function OfficeList() {
 
 	return (
 		<div>
-			<div id={'office-name'}>{localStorage.getItem('office')}s</div>
+			<div id={'office-name'}>{sessionStorage.getItem('office')}s</div>
 			<div>{electedOfficialArray}</div>
 		</div>
 	);

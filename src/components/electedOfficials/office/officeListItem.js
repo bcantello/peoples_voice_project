@@ -8,7 +8,7 @@ export default function OfficeListItem(props) {
 	const official = universalContext.officials.data.officials[props.element].name;
 
 	const handleOfficialClick = () => {
-		localStorage.setItem('officialIndex', props.element);
+		sessionStorage.setItem('officialIndex', props.element);
 		history.push('/official');
 	}
 

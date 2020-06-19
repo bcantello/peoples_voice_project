@@ -8,11 +8,11 @@ require('dotenv').config();
 
 function App() {
     const [officials, setOfficials] = useState(() => {
-        const result = localStorage.getItem('electedOfficials');
+        const result = sessionStorage.getItem('electedOfficials');
         return result ? JSON.parse(result) : {}
     });
     const [pollingLocations, setPollingLocations] = useState(() => {
-        const result = localStorage.getItem('pollingLocations');
+        const result = sessionStorage.getItem('pollingLocations');
         return result ? JSON.parse(result) : {}
     });
 

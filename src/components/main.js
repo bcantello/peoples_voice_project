@@ -5,6 +5,7 @@ import OfficeList from "./electedOfficials/office/officeList";
 import ElectedOfficialDetails from "./electedOfficials/official/electedOfficialDetails";
 import RepSearchResults from "./electedOfficials/repSearchForm/repSearchResults";
 import About from "./about/about";
+import PollingLocations from "./pollingLocations/pollingLocations";
 
 export default function Main() {
 	return (
@@ -15,6 +16,7 @@ export default function Main() {
 			<Route exact path="/electedOffices" component={RepSearchResults}/>
 			<Route exact path="/office" component={OfficeList}/>
 			<Route exact path="/official" component={ElectedOfficialDetails}/>
+			<Route exact path={"/pollingLocations"} component={PollingLocations}/>
 			<Redirect to='/home'/>
 		</Switch>
 	);

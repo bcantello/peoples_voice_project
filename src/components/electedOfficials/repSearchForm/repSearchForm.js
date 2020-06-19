@@ -12,13 +12,14 @@ export default function RepSearchForm() {
 		state: "",
 		zip: "",
 	});
+	const address = universalContext.addressFormatter(userAddress);
 
 	const handleSubmit = e => {
 		e.preventDefault();
-		getElectedOfficials(universalContext.addressFormatter(userAddress)).then(res => {
+		getElectedOfficials(address).then(res => {
 			if (res.status === 200) {
 				universalContext.setOfficials(res);
-				localStorage.setItem('electedOfficials', JSON.stringify(res));
+				sessionStorage.setItem('electedOfficials', JSON.stringify(res));
 				history.push('/electedOffices');
 			} else {
 				document.getElementById('error-response')
