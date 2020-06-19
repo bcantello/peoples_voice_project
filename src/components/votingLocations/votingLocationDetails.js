@@ -9,7 +9,10 @@ export default function VotingLocationDetails() {
 
 	return (
 		<div>
-			<div>Polling Locations for {address.line1}, {address.city}, {address.zip}</div>
+			<div>Upcoming elections for for {address.line1}, {address.city}, {address.zip}</div>
+			<div>{universalContext.pollingLocations.data.election.name}</div>
+			<div>Election day: {universalContext.pollingLocations.data.election.electionDay}</div>
+			<div>Polling Locations:</div>
 			<PollingLocationsList/>
 			<div>Early Voting Sites</div>
 			<EarlyVoteSitesList/>

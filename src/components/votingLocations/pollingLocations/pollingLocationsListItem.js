@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function PollingLocationsListItem(props) {
-	console.log("Polling Props", props);
 	const address = props.element.address;
 	const hours = [];
 	const notes = [];

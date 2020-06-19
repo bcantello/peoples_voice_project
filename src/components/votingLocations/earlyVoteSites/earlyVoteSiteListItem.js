@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function EarlyVoteSitesListItem(props) {
-	console.log("THESE PROPS!", props);
 	const address = props.element.address;
 	const hours = [];
 	const notes = [];
