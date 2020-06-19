@@ -20,7 +20,7 @@ export default function PollingLocationsSearchForm() {
 			if (res.status === 200) {
 				universalContext.setPollingLocations(res);
 				sessionStorage.setItem('pollingLocations', JSON.stringify(res));
-				history.push('/pollingLocations');
+				history.push('/pollingLocationDetails');
 			} else {
 				document.getElementById('error-response')
 					.innerHTML = "Either an incorrect address was entered, or there are no upcoming elections for this location."
