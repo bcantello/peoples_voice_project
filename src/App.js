@@ -26,25 +26,23 @@ function App() {
     }
 
   return (
-    <div className="App">
-        <body>
-        <Header/>
-        <div className={'content'}>
-            <UniversalContext.Provider value={
-                {
-                    officials,
-                    setOfficials,
-                    pollingLocations,
-                    setPollingLocations,
-                    addressFormatter
-                }
-            }>
-                <Main/>
-            </UniversalContext.Provider>
-        </div>
-        <Footer/>
-        </body>
-    </div>
+      <div className="App">
+          <Header/>
+          <div className={'content'}>
+              <UniversalContext.Provider value={
+                  {
+                      officials,
+                      setOfficials,
+                      pollingLocations,
+                      setPollingLocations,
+                      addressFormatter
+                  }
+              }>
+                  <Main/>
+              </UniversalContext.Provider>
+          </div>
+          <Footer/>
+      </div>
   );
 }
 

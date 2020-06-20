@@ -13,6 +13,6 @@ export default function EarlyVoteSitesList() {
 	});
 
 	return (
-		<div>{pollingLocationsArr}</div>
+		<div id={'early-vote-locations-wrapper'}>{pollingLocationsArr}</div>
 	);
 };

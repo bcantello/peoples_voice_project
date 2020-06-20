@@ -1,4 +1,5 @@
 import React from "react";
+import '../votingLocations.css';
 
 export default function EarlyVoteSitesListItem(props) {
 	const address = props.element.address;
@@ -20,12 +21,12 @@ export default function EarlyVoteSitesListItem(props) {
 
 	return (
 		<div className={'early-vote-location-details'}>
-			<div className={'early-vote-location-dates'}>From {props.element.startDate} to {props.element.endDate}</div>
 			<div className={'early-vote-location-address'}>
 				<div>{address.locationName}</div>
 				<div>{address.line1}</div>
 				<div>{address.city}, {address.state} {address.zip}</div>
 			</div>
+			<div className={'early-vote-location-dates'}>From {props.element.startDate} to {props.element.endDate}</div>
 			<div className={'early-vote-location-hours'}>{hours}</div>
 			<div className={'early-vote-location-notes'}>{notes}</div>
 		</div>
