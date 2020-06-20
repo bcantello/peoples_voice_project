@@ -1,18 +1,17 @@
 import React from "react";
-import history from "../../history";
-import './electedOfficials.css';
+import history from "../../../history";
+import '../electedOfficials.css';
 
 export default function ElectedOfficialsListItem(props) {
 
 	const handleOfficeClick = () => {
-		console.log("THESE PROPS",props)
 		if (props.element.officialIndices.length === 1) {
-			localStorage.setItem('officialIndex', props.element.officialIndices);
-			localStorage.setItem('office', props.element.name)
+			sessionStorage.setItem('officialIndex', props.element.officialIndices);
+			sessionStorage.setItem('office', props.element.name)
 			history.push('/official');
 		} else {
-			localStorage.setItem('officialIndices', props.element.officialIndices);
-			localStorage.setItem('office', props.element.name)
+			sessionStorage.setItem('officialIndices', props.element.officialIndices);
+			sessionStorage.setItem('office', props.element.name)
 			history.push('/office');
 		}
 	}

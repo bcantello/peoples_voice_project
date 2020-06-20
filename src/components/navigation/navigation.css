@@ -11,7 +11,7 @@ nav div {
 }
 
 .footer {
-    margin: 10px;
+    margin: 25px 10px 10px 10px;
     flex-shrink: 0;
     bottom: 0;
     position: relative;

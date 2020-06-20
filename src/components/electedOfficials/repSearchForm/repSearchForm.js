@@ -1,7 +1,7 @@
 import React, {useContext, useState} from "react";
-import {UniversalContext} from "../../App";
-import {getElectedOfficials} from "../services/api-helper";
-import history from "../../history";
+import {UniversalContext} from "../../../App";
+import {getElectedOfficials} from "../../services/civic-api-helper";
+import history from "../../../history";
 import './repSearchForm.css';
 
 export default function RepSearchForm() {
@@ -12,20 +12,14 @@ export default function RepSearchForm() {
 		state: "",
 		zip: "",
 	});
-
-	const addressArr = userAddress.address.split(' ');
-	let streetAddress = "";
-	for (let i = 0; i < addressArr.length; i++) {
-		streetAddress = streetAddress + addressArr[i] + '%20';
-	}
-	const address = `${streetAddress}${userAddress.city}%20${userAddress.state}%20${userAddress.zip}`
+	const address = universalContext.addressFormatter(userAddress);
 
 	const handleSubmit = e => {
 		e.preventDefault();
 		getElectedOfficials(address).then(res => {
 			if (res.status === 200) {
 				universalContext.setOfficials(res);
-				localStorage.setItem('electedOfficials', JSON.stringify(res));
+				sessionStorage.setItem('electedOfficials', JSON.stringify(res));
 				history.push('/electedOffices');
 			} else {
 				document.getElementById('error-response')

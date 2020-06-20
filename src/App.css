@@ -1,12 +1,5 @@
-body, html {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-}
-
 .content {
-  min-height: calc(100vh - 125px);
+  min-height: calc(100vh - 145px);
 }
 
 .App::-webkit-scrollbar {
