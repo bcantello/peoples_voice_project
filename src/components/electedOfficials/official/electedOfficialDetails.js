@@ -4,7 +4,7 @@ import '../electedOfficials.css';
 
 export default function ElectedOfficialDetails() {
 	const universalContext = useContext(UniversalContext);
-	const official = universalContext.officials.data.officials[localStorage.getItem('officialIndex')];
+	const official = universalContext.officials.data.officials[sessionStorage.getItem('officialIndex')];
 	const officialName = [];
 	const officialImage = [];
 	const officialData = [];

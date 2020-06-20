@@ -1,0 +1,33 @@
+#election-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 85%;
+    font-family: Roboto, serif;
+    line-height: 1.5;
+    background: rgba(249, 247, 247, 0.9);
+    box-shadow: 20px 25px 13px -20px rgba(0,0,0,0.35);
+    border-radius: 9px;
+}
+
+#election-user-address {
+    font-weight: bold;
+    font-size: 1.25em;
+    padding: 1em;
+}
+
+#polling-locations-title, #early-voting-sites-title {
+    font-weight: bold;
+    padding: 1em;
+}
+
+#early-vote-locations-wrapper {
+    padding-bottom: 1.5em;
+}
+
+.early-vote-location-address {
+    padding-bottom: 1em;
+}
+
+.early-vote-location-dates {
+    padding-bottom: .5em;
+}

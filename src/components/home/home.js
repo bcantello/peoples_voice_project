@@ -1,5 +1,5 @@
 import React from "react";
-import RepSearchForm from "../repSearchForm/repSearchForm";
+import RepSearchForm from "../electedOfficials/repSearchForm/repSearchForm";
 import './home.css';
 
 export default function Home() {
