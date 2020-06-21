@@ -10,6 +10,13 @@ body {
   display: flex;
   flex-direction: column;
   width: 100vw;
+
+  -ms-overflow-style: none;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 code {
