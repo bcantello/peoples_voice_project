@@ -1,12 +1,3 @@
 .content {
-  min-height: calc(100vh - 145px);
-}
-
-.App::-webkit-scrollbar {
-  display: none;
-}
-
-.App {
-  -ms-overflow-style: none;
-  overflow-x: hidden;
+  min-height: calc(100vh - 150px);
 }
