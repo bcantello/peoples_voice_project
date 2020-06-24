@@ -1,6 +1,6 @@
 import React, {useContext, useState} from "react";
 import {UniversalContext} from "../../../App";
-import {getElectedOfficials} from "../../services/civic-api-helper";
+import {getElectedOfficials, getPollingLocations} from "../../services/civic-api-helper";
 import history from "../../../history";
 import './repSearchForm.css';
 
@@ -14,7 +14,7 @@ export default function RepSearchForm() {
 	});
 	const address = universalContext.addressFormatter(userAddress);
 
-	const handleSubmit = e => {
+	const handleSubmitReps = e => {
 		e.preventDefault();
 		getElectedOfficials(address).then(res => {
 			if (res.status === 200) {
@@ -30,6 +30,24 @@ export default function RepSearchForm() {
 		});
 	};
 
+	const handleSubmitPolls = e => {
+		e.preventDefault();
+		getPollingLocations(address).then(res => {
+			if (res.status === 200) {
+				universalContext.setPollingLocations(res);
+				sessionStorage.setItem('pollingLocations', JSON.stringify(res));
+				history.push('/pollingLocationDetails');
+			} else {
+				document.getElementById('error-response')
+					.innerHTML = "Either an incorrect address was entered, or there are no upcoming elections for this location."
+			}
+		}).catch(e => {
+			return e;
+		});
+	};
+	console.log(JSON.parse(sessionStorage.getItem('pollingLocations')));
+
+
 	const handleAddressChange = e => {
 		const {name, value} = e.target;
 		setUserAddress({...userAddress, [name]: value});
@@ -39,7 +57,7 @@ export default function RepSearchForm() {
 		<div className={'address-form-container'}>
 			<div className={'address-form'}>
 				<div className={'address-form-title'}><h1>Representative Search</h1></div>
-				<form className={'rep-search-form'} onSubmit={handleSubmit}>
+				<form className={'rep-search-form'} >
 					<input
 						className="address-form-field"
 						type="text"
@@ -72,7 +90,10 @@ export default function RepSearchForm() {
 						value={userAddress.zip}
 						onChange={handleAddressChange} required
 					/>
-					<button className="address-form-button" type="submit">Search</button>
+					<div id={'home-form-btn-container'}>
+						<button className="address-form-button" type="submit" onClick={handleSubmitReps}>Search Rep</button>
+						<button className="address-form-button" type="submit" onClick={handleSubmitPolls}>Search Polls</button>
+					</div>
 					<div id={'error-response'}></div>
 				</form>
 			</div>
