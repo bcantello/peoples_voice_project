@@ -3,8 +3,8 @@ import './App.css';
 import Main from "./components/main";
 import Header from "./components/navigation/header";
 import Footer from "./components/navigation/footer";
-import { getIPAddress } from './components/services/ip-api-helper';
-import { getUpcomingElections } from './components/services/civic-api-helper';
+import { getIPAddress } from './services/ip-api-helper';
+import { getUpcomingElections } from './services/civic-api-helper';
 
 require('dotenv').config();
 
@@ -35,8 +35,6 @@ function App() {
         getUserInfo();
     }, []);
 
-    console.log('user ip info',userIpInfo)
-
     useEffect(() => {
         const getElectionInfo = async () => {
             await getUpcomingElections().then(res => {
@@ -52,27 +50,6 @@ function App() {
         getElectionInfo();
     }, []);
 
-    console.log('election info',electionInfo);
-
-    // useEffect(() => {
-    //     const checkUserElections = () => {
-    //         for(let i = 1; i < electionInfo.length; i++){
-    //             console.log('Im here')
-    //             let splitArr = electionInfo.elections[i].ocdDivisionId.split(':')
-    //             console.log('split array',splitArr)
-    //         }
-    //     }
-    //     checkUserElections();
-    // });
-
-    // if (electionInfo !== undefined) {
-    //     for(let i = 1; i < electionInfo.length; i++){
-    //     console.log('Im here')
-        
-    //     let splitArr = electionInfo.elections[i].ocdDivisionId.split(':')
-    //     console.log('split array',splitArr)
-    // }};
-    
     const addressFormatter = (userAddress) => {
         const addressArr = userAddress.address.split(' ');
         let streetAddress = "";
@@ -92,6 +69,8 @@ function App() {
                       setOfficials,
                       pollingLocations,
                       setPollingLocations,
+                      userIpInfo,
+                      electionInfo,
                       addressFormatter
                   }
               }>
