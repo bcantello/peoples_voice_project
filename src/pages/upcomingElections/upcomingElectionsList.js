@@ -1,6 +1,7 @@
 import React, {useContext} from "react";
 import {UniversalContext} from "../../App";
 import UpcomingElectionsListItem from "./upcomingElectionsListItem";
+import './upcomingElections.css';
 
 export default function UpcomingElectionsList() {
 	const universalContext = useContext(UniversalContext);
@@ -18,6 +19,6 @@ export default function UpcomingElectionsList() {
 	});
 
 	return (
-		<div>{electionsArr}</div>
+		<div id={'upcoming-elections-wrapper'}>{electionsArr}</div>
 	);
 };
