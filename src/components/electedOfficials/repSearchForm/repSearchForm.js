@@ -33,6 +33,7 @@ export default function RepSearchForm() {
 	const handleSubmitPolls = e => {
 		e.preventDefault();
 		getPollingLocations(address).then(res => {
+			console.log("response from search form",res);
 			if (res.status === 200) {
 				universalContext.setPollingLocations(res);
 				sessionStorage.setItem('pollingLocations', JSON.stringify(res));
