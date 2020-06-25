@@ -10,7 +10,6 @@ export default function UpcomingElectionsList() {
 		electionsList.shift();
 		sessionStorage.setItem('electionsList', JSON.stringify(electionsList));
 	}
-	console.log(JSON.parse(sessionStorage.getItem('electionsList')));
 
 	const electionsArr = JSON.parse(sessionStorage.getItem('electionsList')).map((e, index) => {
 		return (
