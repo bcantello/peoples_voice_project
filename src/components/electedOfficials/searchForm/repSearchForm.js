@@ -45,8 +45,6 @@ export default function RepSearchForm() {
 			return e;
 		});
 	};
-	console.log(JSON.parse(sessionStorage.getItem('pollingLocations')));
-
 
 	const handleAddressChange = e => {
 		const {name, value} = e.target;
@@ -91,8 +89,12 @@ export default function RepSearchForm() {
 						onChange={handleAddressChange} required
 					/>
 					<div id={'home-form-btn-container'}>
-						<button className="address-form-button" type="submit" onClick={handleSubmitReps}>Search Rep</button>
-						<button className="address-form-button" type="submit" onClick={handleSubmitPolls}>Search Polls</button>
+						<button className="address-form-button"
+						        type="submit"
+						        onClick={handleSubmitReps}>Search Rep</button>
+						<button className="address-form-button"
+						        type="submit"
+						        onClick={handleSubmitPolls}>Search Polls</button>
 					</div>
 					<div id={'error-response'}></div>
 				</form>
