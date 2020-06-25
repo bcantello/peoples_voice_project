@@ -3,7 +3,7 @@ import {Route, Switch, Redirect} from 'react-router';
 import Home from "../pages/home/home";
 import OfficeList from "./electedOfficials/office/officeList";
 import ElectedOfficialDetails from "./electedOfficials/official/electedOfficialDetails";
-import RepSearchResults from "./electedOfficials/repSearchForm/repSearchResults";
+import RepSearchResults from "./electedOfficials/searchForm/repSearchResults";
 import About from "../pages/about/about";
 import VotingLocationDetails from "./votingLocations/votingLocationDetails";
 
