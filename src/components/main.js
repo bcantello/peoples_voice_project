@@ -7,6 +7,7 @@ import RepSearchResults from "./electedOfficials/searchForm/repSearchResults";
 import About from "../pages/about/about";
 import VotingLocationDetails from "./votingLocations/votingLocationDetails";
 import UpcomingElections from "../pages/upcomingElections/upcompingElections";
+import Contact from "../pages/contact/contact";
 
 export default function Main() {
 	return (
@@ -15,6 +16,7 @@ export default function Main() {
 			<Route exact path="/home" component={Home}/>
 			<Route exact path="/upcomingElections" component={UpcomingElections}/>
 			<Route exact path="/about" component={About}/>
+			<Route exact path="/contact" component={Contact}/>
 			<Route exact path="/electedOffices" component={RepSearchResults}/>
 			<Route exact path="/office" component={OfficeList}/>
 			<Route exact path="/official" component={ElectedOfficialDetails}/>

@@ -1,0 +1,54 @@
+#my-form {
+    width: 95%;
+    margin: 1.5em auto 0 auto;
+    padding-bottom: 40px;
+}
+#my-form input, textarea {
+    background: rgba(249, 247, 247, 0.9);
+    box-shadow: 20px 25px 13px -20px rgba(0,0,0,0.35);
+    border: 0;
+    box-sizing: border-box;
+    color: #fff;
+    display: block;
+    font-size: 12pt;
+    margin-bottom: 3px;
+    outline: none;
+    padding: 10px 15px;
+    width: 100%;
+}
+#my-form textarea {
+    height: 200px;
+    resize: none;
+}
+#contact-button {
+    border: solid white 2px;
+    border-radius: 5px;
+    background-color: #77889d;
+    color: white;
+    font-size: 20px;
+    width: 100px;
+    margin-top: 5px;
+    float: right;
+}
+#my-form-status {
+    font-size: 1em;
+    margin: 1em auto;
+}
+
+@media (min-width: 767px) and (max-width: 1023px) {
+    #my-form {
+        width: 70%;
+    }
+    #my-form textarea {
+        height: 300px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #my-form {
+        width: 50%;
+    }
+    #my-form textarea {
+        height: 300px;
+    }
+}
