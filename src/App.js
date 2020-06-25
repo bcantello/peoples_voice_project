@@ -18,15 +18,18 @@ function App() {
         return result ? JSON.parse(result) : {}
     });
     const [userIpInfo, setUserIpInfo] = useState({});
-    const [electionInfo, setElectionInfo] = useState({});
+    const [electionInfo, setElectionInfo] = useState(() => {
+        const result = sessionStorage.getItem('upcomingElections');
+        return result ? JSON.parse(result) : {}
+    });
 
     useEffect(() => {
         const getUserInfo = async () => {
             await getIPAddress().then(res => {
                 if (res.status === 200) {
-                    setUserIpInfo(res.data)
+                    setUserIpInfo(res.data);
                 } else {
-                    console.log("error retrieving user IP")
+                    console.log("error retrieving user IP");
                 }
             }).catch(e => {
                 console.log(e);
@@ -39,9 +42,10 @@ function App() {
         const getElectionInfo = async () => {
             await getUpcomingElections().then(res => {
                 if (res.status === 200) {
-                    setElectionInfo(res.data)
+                    setElectionInfo(res.data);
+                    sessionStorage.setItem('upcomingElections', JSON.stringify(res));
                 } else {
-                    console.log("error retrieving upcoming elections")
+                    console.log("error retrieving upcoming elections");
                 }
             }).catch(e => {
                 console.log(e);
