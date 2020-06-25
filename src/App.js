@@ -1,8 +1,10 @@
-import React, {useState, createContext} from 'react';
+import React, {useState, createContext, useEffect} from 'react';
 import './App.css';
 import Main from "./components/main";
 import Header from "./components/navigation/header";
 import Footer from "./components/navigation/footer";
+import { getIPAddress } from './services/ip-api-helper';
+import { getUpcomingElections } from './services/civic-api-helper';
 
 require('dotenv').config();
 
@@ -15,6 +17,42 @@ function App() {
         const result = sessionStorage.getItem('pollingLocations');
         return result ? JSON.parse(result) : {}
     });
+    const [userIpInfo, setUserIpInfo] = useState({});
+    const [electionInfo, setElectionInfo] = useState(() => {
+        const result = sessionStorage.getItem('upcomingElections');
+        return result ? JSON.parse(result) : {}
+    });
+
+    useEffect(() => {
+        const getUserInfo = async () => {
+            await getIPAddress().then(res => {
+                if (res.status === 200) {
+                    setUserIpInfo(res.data);
+                } else {
+                    console.log("error retrieving user IP");
+                }
+            }).catch(e => {
+                console.log(e);
+            });
+        };
+        getUserInfo();
+    }, []);
+
+    useEffect(() => {
+        const getElectionInfo = async () => {
+            await getUpcomingElections().then(res => {
+                if (res.status === 200) {
+                    setElectionInfo(res.data);
+                    sessionStorage.setItem('upcomingElections', JSON.stringify(res));
+                } else {
+                    console.log("error retrieving upcoming elections");
+                }
+            }).catch(e => {
+                console.log(e);
+            });
+        };
+        getElectionInfo();
+    }, []);
 
     const addressFormatter = (userAddress) => {
         const addressArr = userAddress.address.split(' ');
@@ -35,6 +73,8 @@ function App() {
                       setOfficials,
                       pollingLocations,
                       setPollingLocations,
+                      userIpInfo,
+                      electionInfo,
                       addressFormatter
                   }
               }>

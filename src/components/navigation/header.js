@@ -8,11 +8,14 @@ export default function Header() {
 			<Link className={'nav-link'} to={'/'} style={{textDecoration: 'none'}}>
 				<div><span>Home</span></div>
 			</Link>
+			<Link className={'nav-link'} to={'/upcomingElections'} style={{textDecoration: 'none'}}>
+				<div><span>Upcoming Elections</span></div>
+			</Link>
 			<Link className={'nav-link'} to={'/about'} style={{textDecoration: 'none'}}>
 				<div><span>About</span></div>
 			</Link>
-			<Link className={'nav-link'} to={'/pollinglocations'} style={{textDecoration: 'none'}}>
-				<div><span>Polling Locations</span></div>
+			<Link className={'nav-link'} to={'/contact'} style={{textDecoration: 'none'}}>
+				<div><span>Contact</span></div>
 			</Link>
 		</nav>
 	);
