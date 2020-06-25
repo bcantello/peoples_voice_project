@@ -14,6 +14,9 @@ export default function Header() {
 			<Link className={'nav-link'} to={'/about'} style={{textDecoration: 'none'}}>
 				<div><span>About</span></div>
 			</Link>
+			<Link className={'nav-link'} to={'/contact'} style={{textDecoration: 'none'}}>
+				<div><span>Contact</span></div>
+			</Link>
 		</nav>
 	);
 };
