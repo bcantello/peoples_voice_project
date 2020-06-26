@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-	baseURL: 'http://ip-api.com/json/'
+	baseURL: 'https://ipapi.co/json/'
 });
 
 export const getIPAddress = async () => {

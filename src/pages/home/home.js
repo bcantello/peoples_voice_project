@@ -13,12 +13,12 @@ export default function Home() {
 	if (electionsList.elections !== undefined) {
 		for (let i = 1; i < electionsList.elections.length; i++) {
 			let splitArr = electionsList.elections[i].ocdDivisionId.split(':')
-			if (userIp.region.toLowerCase() === splitArr[2]) {
+			if (userIp.region_code === splitArr[2].toUpperCase()) {
 				upcomingElection = electionsList.elections[i].name;
 			}
 		}
 		upcomingElection !== '' ? electionDisplay = upcomingElection : electionDisplay =
-			`There are no upcoming elections for ${userIp.regionName}`
+			`There are no upcoming elections for ${userIp.region_code}`;
 	}
 
 	return (
@@ -31,7 +31,9 @@ export default function Home() {
 			<div className={'content-block-2'}>
 				<h1 className={'block2-h1'}>Representative Search</h1>
 				<div className={'upcoming'}>
-				<p>Upcoming elections for {userIp.regionName}:</p>
+				<p className={'rep-intro'}>Enter your address to find the contact information for the government
+					representatives who have been elected to serve you.</p>
+				<p>Upcoming elections for {userIp.region_code}:</p>
 				<p>{electionDisplay}</p>
 				</div>
 			<RepSearchForm/>
