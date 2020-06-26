@@ -54,7 +54,10 @@ export default function RepSearchForm() {
 	return (
 		<div className={'address-form-container'}>
 			<div className={'address-form'}>
-				<div className={'address-form-title'}><h1>Representative Search</h1></div>
+				<div className={'address-form-title'}>
+				<p className={'form-intro'}>Enter your address to find the contact information for the government
+					representatives who have been elected to serve you.</p>
+				</div>
 				<form className={'rep-search-form'} >
 					<input
 						className="address-form-field"
@@ -91,10 +94,10 @@ export default function RepSearchForm() {
 					<div id={'home-form-btn-container'}>
 						<button className="address-form-button"
 						        type="submit"
-						        onClick={handleSubmitReps}>Search Rep</button>
+						        onClick={handleSubmitReps}>Find Rep.</button>
 						<button className="address-form-button"
 						        type="submit"
-						        onClick={handleSubmitPolls}>Search Polls</button>
+						        onClick={handleSubmitPolls}>See Elections</button>
 					</div>
 					<div id={'error-response'}></div>
 				</form>

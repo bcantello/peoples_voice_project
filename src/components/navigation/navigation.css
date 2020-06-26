@@ -9,11 +9,13 @@ nav {
 
 nav div {
     padding: 1em 1.5em;
-    font-size: 1.25em;
+    font-size: 1em;
+    color: #5E5D5D;
+    background: transparent;
 }
 
-nav span:hover {
-    border-bottom: 2px solid blue;
+nav span:hover, nav span:visited {
+    border-bottom: 2px solid #E09F3E;;
 }
 
 .footer {
