@@ -8,7 +8,7 @@ nav {
 }
 
 nav div {
-    padding: 1em 1.5em;
+    padding: 1em 1em;
     font-size: 1em;
     color: #5E5D5D;
     background: transparent;
@@ -23,7 +23,6 @@ nav span:hover, nav span:visited {
     flex-shrink: 0;
     bottom: 0;
     position: relative;
-    width: 100%;
     text-align: center;
 }
 

@@ -55,6 +55,9 @@
     padding-bottom: 3%;
     color: #5c5c5c;
     font-size: smaller;
+    width: 85%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 #upcoming-details {
