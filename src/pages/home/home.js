@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import RepSearchForm from "../../components/electedOfficials/searchForm/repSearchForm";
+import RepSearchForm from "../../components/searchForm/repSearchForm";
 import {UniversalContext} from "../../App";
 import './home.css';
 import headerImage from '../../assets/draft-opaque.svg';

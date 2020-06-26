@@ -1,5 +1,5 @@
 import React from "react";
-import ElectedOfficialsList from "../official/electedOfficialsList";
+import ElectedOfficialsList from "../electedOfficials/official/electedOfficialsList";
 
 export default function RepSearchResults() {
 	return (
