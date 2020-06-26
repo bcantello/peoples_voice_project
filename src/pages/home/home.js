@@ -18,7 +18,7 @@ export default function Home() {
 			}
 		}
 		upcomingElection !== '' ? electionDisplay = upcomingElection : electionDisplay =
-			`There are no upcoming elections for ${userIp.region}`
+			`There are no upcoming elections for ${userIp.regionName}`
 	}
 
 	return (
@@ -29,10 +29,11 @@ export default function Home() {
 				discover upcoming local elections, and find polling locations - enjoy!</p>
 			</div>
 			<div className={'content-block-2'}>
-				<p className={'rep-intro'}>Enter your address to find the contact information for the government
-					representatives who have been elected to serve you.</p>
-				<p>Upcoming elections for {userIp.region}:</p>
+				<h1 className={'block2-h1'}>Representative Search</h1>
+				<div className={'upcoming'}>
+				<p>Upcoming elections for {userIp.regionName}:</p>
 				<p>{electionDisplay}</p>
+				</div>
 			<RepSearchForm/>
 			</div>
 		</>
