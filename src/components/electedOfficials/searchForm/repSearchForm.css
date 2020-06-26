@@ -23,14 +23,18 @@
 }
 
 .error-response {
-    color: red;
+    color: #C44536;
     font-size: 10px;
 }
 
-.address-form-title h1 {
-    color: #5E5D5D;
-    padding: 30px 0 10px 0;
-    font-size: 1.5em;
+.form-intro {
+    width: 85%;
+    max-width: 1000px;
+    line-height: 1.5em;
+    text-align: center;
+    margin: auto;
+    padding-top: 5%;
+    padding-bottom: 3%;
 }
 
 .rep-search-form {
@@ -57,10 +61,11 @@
     font-family: Roboto, serif;
     border: none;
     border-radius: 5px;
-    width: 25%;
-    margin: 20px 20px 8px 20px;
-    background-color: #504ee8;
-    padding: 10px 15px;
+    width: 45%;
+    height: 15%;
+    margin: 10px 5px 10px 5px;
+    background-color: #E09F3E;
+    padding: 10px 10px;
     text-align: center;
     font-size: 1em;
     font-weight: 500;

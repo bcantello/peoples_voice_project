@@ -4,10 +4,15 @@
     margin: 0;
     padding: 30px;
     background-color: #f2f2f2;
+    background-image: url('../../assets/draft-opaque.svg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    box-shadow: 0px 4px 6px 0px rgba(26, 26, 26, 0.15);
 }
 
 .home-h1 {
-    color: #5E5D5D;
+    /* color: #5E5D5D; */
+    color: black;
     width: 85%;
     max-width: 1000px;
     margin: auto;
@@ -17,7 +22,8 @@
 }
 
 .home-intro {
-    color: #5E5D5D;
+    /* color: #5E5D5D; */
+    color: black;
     width: 85%;
     max-width: 1000px;
     margin: auto;
@@ -33,10 +39,20 @@
     background-color: white;
 }
 
-.rep-intro {
+.block2-h1 {
     width: 85%;
     max-width: 1000px;
-    margin: 2em auto;
+    margin: auto;
     line-height: 1.5em;
     text-align: center;
+    padding-top: 5vh;
+    padding-bottom: 1%;
+    color: #E09F3E;
+}
+
+.upcoming {
+    font-style: italic;
+    padding-bottom: 3%;
+    color: #5c5c5c;
+    font-size: smaller;
 }
