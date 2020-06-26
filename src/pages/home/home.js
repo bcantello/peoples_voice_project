@@ -26,7 +26,7 @@ export default function Home() {
 		<>
 			<h1 className={'home-h1'}>The People's Voice Project</h1>
 			<div className={'content-block-1'}>
-				<img id={'header-image'} src={headerImage}/>
+				<img id={'header-image'} src={headerImage} alt={'peace sign hands'}/>
 			</div>
 			<div className={'intro-block'}>
 				<p className={'home-intro'}>Welcome to The People's Voice Project. A central location where users can search government representatives,
