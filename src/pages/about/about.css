@@ -1,0 +1,9 @@
+#about-content {
+    width: 85%;
+    max-width: 1000px;
+    margin: 20vh auto;
+}
+
+#about-content p {
+    font-size: 1.5em;
+}

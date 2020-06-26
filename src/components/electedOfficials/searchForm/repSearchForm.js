@@ -55,8 +55,8 @@ export default function RepSearchForm() {
 		<div className={'address-form-container'}>
 			<div className={'address-form'}>
 				<div className={'address-form-title'}>
-				<p className={'form-intro'}>Enter your address to find the contact information for the government
-					representatives who have been elected to serve you.</p>
+				{/*<p className={'form-intro'}>Enter your address to find the contact information for the government*/}
+				{/*	representatives who have been elected to serve you.</p>*/}
 				</div>
 				<form className={'rep-search-form'} >
 					<input

@@ -33,8 +33,10 @@ export default function Home() {
 				<div className={'upcoming'}>
 				<p className={'rep-intro'}>Enter your address to find the contact information for the government
 					representatives who have been elected to serve you.</p>
-				<p>Upcoming elections for {userIp.region_code}:</p>
-				<p>{electionDisplay}</p>
+					<div id={'upcoming-details'}>
+						<p>Upcoming elections for {userIp.region_code}:</p>
+						<p>{electionDisplay}</p>
+					</div>
 				</div>
 			<RepSearchForm/>
 			</div>

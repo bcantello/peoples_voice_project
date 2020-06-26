@@ -1,6 +1,6 @@
 #upcoming-elections-wrapper {
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 2em auto;
     width: 85%;
     font-family: Roboto, serif;
     line-height: 1.5;
@@ -15,9 +15,9 @@
 
 .upcoming-election-name {
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.0em;
 }
 
 .upcoming-election-day {
-    font-size: 1.5em;
+    font-size: .85em;
 }
