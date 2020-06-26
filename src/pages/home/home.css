@@ -1,42 +1,44 @@
 .content-block-1 {
     width: 100%;
-    height: 300px;
     margin: 0;
-    padding: 30px;
     background-color: #f2f2f2;
-    background-image: url('../../assets/peace.svg');
-    background-position: bottom;
-    background-repeat: no-repeat;
-    box-shadow: 0px 4px 6px 0px rgba(26, 26, 26, 0.15);
+}
+
+.content-block-1 img {
+    height: 200px;
 }
 
 .home-h1 {
-    /* color: #5E5D5D; */
-    color: black;
-    width: 85%;
-    max-width: 1000px;
-    margin: auto;
+    background-color: #f2f2f2;
+    font-family: Roboto, sans-serif;
+    width: 100%;
     text-align: center;
-    padding-top: 5vh;
+    padding-top: 1vh;
     padding-bottom: 1%;
+    color: #E09F3E;
+    font-size: 3.5em;
 }
 
 .home-intro {
-    /* color: #5E5D5D; */
-    color: black;
+    color: #5c5c5c;
     width: 85%;
     max-width: 1000px;
     margin: auto;
     line-height: 1.5em;
     text-align: center;
-    padding-top: 1%;
+    padding-top: 5vh;
     padding-bottom: 5vh;
+    font-size: 1.25em;
+    font-family: Roboto, sans-serif;
+}
+
+.intro-block {
+    box-shadow: inset 0 4px 6px 0 rgba(26, 26, 26, 0.15), inset 0 -4px 6px 0 rgba(26, 26, 26, 0.15);
 }
 
 .content-block-2 {
     width: 100%;
-    height: 600px;
-    background-color: white;
+    background-color: #E8B973;
 }
 
 .block2-h1 {
@@ -47,7 +49,9 @@
     text-align: center;
     padding-top: 5vh;
     padding-bottom: 1%;
-    color: #E09F3E;
+    color: #f2f2f2;
+    font-family: Roboto, sans-serif;
+    font-size: 3em;
 }
 
 .upcoming {

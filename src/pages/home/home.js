@@ -1,7 +1,8 @@
 import React, {useContext} from "react";
-import RepSearchForm from "../../components/electedOfficials/searchForm/repSearchForm";
+import RepSearchForm from "../../components/searchForm/repSearchForm";
 import {UniversalContext} from "../../App";
 import './home.css';
+import headerImage from '../../assets/draft-opaque.svg';
 
 export default function Home() {
 	const universalContext = useContext(UniversalContext);
@@ -18,23 +19,26 @@ export default function Home() {
 			}
 		}
 		upcomingElection !== '' ? electionDisplay = upcomingElection : electionDisplay =
-			`There are no upcoming elections for ${userIp.region_code}`;
+			`There are no upcoming elections for ${userIp.region}`;
 	}
 
 	return (
 		<>
+			<h1 className={'home-h1'}>The People's Voice Project</h1>
 			<div className={'content-block-1'}>
-				<h1 className={'home-h1'}>The People's Voice Project</h1>
+				<img id={'header-image'} src={headerImage}/>
+			</div>
+			<div className={'intro-block'}>
 				<p className={'home-intro'}>Welcome to The People's Voice Project. A central location where users can search government representatives,
-				discover upcoming local elections, and find polling locations - enjoy!</p>
+					discover upcoming local elections, and find polling locations - enjoy!</p>
 			</div>
 			<div className={'content-block-2'}>
 				<h1 className={'block2-h1'}>Representative Search</h1>
 				<div className={'upcoming'}>
-				<p className={'rep-intro'}>Enter your address to find the contact information for the government
+				<p className={'rep-intro'}><span style={{fontWeight:'bold'}}>Here's How:</span> Enter your address to find the contact information for the government
 					representatives who have been elected to serve you.</p>
 					<div id={'upcoming-details'}>
-						<p>Upcoming elections for {userIp.region_code}:</p>
+						<p>Upcoming elections for {userIp.region}:</p>
 						<p>{electionDisplay}</p>
 					</div>
 				</div>
