@@ -38,6 +38,8 @@ export default function Contact() {
 	}
 
 	return (
+		<div className={'contact-form'}>
+		<h1 className={'form-header'}>Reach out!</h1>
 		<form id="my-form" action="https://formspree.io/mwkrnppq" method="POST">
 			<input placeholder="Name"
 			       type="text"
@@ -53,5 +55,6 @@ export default function Contact() {
 			<button id="contact-button" className="form-btn">Submit</button>
 			<p id="my-form-status"></p>
 		</form>
+		</div>
 	);
 };
