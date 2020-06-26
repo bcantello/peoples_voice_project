@@ -10,11 +10,12 @@ nav {
 nav div {
     padding: 1em 1em;
     font-size: 1em;
-    color: #5E5D5D;
+    color: #197278;
     background: transparent;
 }
 
 nav span:hover, nav span:visited {
+    color: #5D9F9E;
     border-bottom: 2px solid #E09F3E;;
 }
 
