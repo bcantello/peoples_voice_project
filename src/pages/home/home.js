@@ -29,20 +29,24 @@ export default function Home() {
 				<img id={'header-image'} src={headerImage} alt={'peace sign hands'}/>
 			</div>
 			<div className={'intro-block'}>
-				<p className={'home-intro'}>Welcome to The People's Voice Project. A central location where users can search government representatives,
+				<p className={'home-intro'}>Welcome to The People's Voice Project. A central location where users can
+					search government representatives,
 					discover upcoming local elections, and find polling locations - enjoy!</p>
 			</div>
 			<div className={'content-block-2'}>
 				<h1 className={'block2-h1'}>Representative Search</h1>
 				<div className={'upcoming'}>
-				<p className={'rep-intro'}><span style={{fontWeight:'bold'}}>Here's How:</span> Enter your address to find the contact information for the government
-					representatives who have been elected to serve you.</p>
+					<p className={'rep-intro'}><span style={{fontWeight: 'bold'}}>Here's How:</span> Enter your address
+						to find the contact information for the government representatives who have been elected to
+						serve you. If there is an upcoming election in your area, click <span
+							style={{fontWeight: 'bold'}}>See Elections</span> to view your voting locations and hours of
+						operation.</p>
 					<div id={'upcoming-details'}>
 						<p>Upcoming elections for {userIp.region}:</p>
 						<p>{electionDisplay}</p>
 					</div>
 				</div>
-			<RepSearchForm/>
+				<RepSearchForm/>
 			</div>
 		</>
 	);
