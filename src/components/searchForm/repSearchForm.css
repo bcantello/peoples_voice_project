@@ -83,6 +83,12 @@
     opacity: .90;
 }
 
+#home-form-btn-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 @media(min-width: 375px) {
     .address-form-title h1 {
         font-size: 1.5em;
@@ -116,6 +122,12 @@
     .address-form-field {
         font-size: 15px;
     }
+
+    #home-form-btn-container {
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 60%;
+    }
 }
 
 @media(min-width: 1024px) {
@@ -138,5 +150,11 @@
 
     .address-form-button {
         width: 150px;
+    }
+
+    #home-form-btn-container {
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 60%;
     }
 }
