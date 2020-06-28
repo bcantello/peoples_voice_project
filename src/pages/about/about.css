@@ -61,7 +61,7 @@
 }
 
 h2.member-name {
-    color: #E56C4E;
+    color: #E09F3E;
     font-size: 20px;
     font-weight: 600;
     text-align: left;
@@ -96,7 +96,6 @@ p.about-member {
 }
 
 .social-links:hover {
-    color: #E56C4E;
     cursor: pointer;
     text-decoration: none;
 }
@@ -111,10 +110,14 @@ p.about-member {
 }
 
 .icon-social-github {
-    color: #353535;
+    color: #265443;
     text-decoration: none;
     margin-left: 18px;
     margin-right: 18px;
+}
+
+.icon-social-github:hover {
+    color: #5D9F9E;
 }
 
 .linkedin, .linkedin > a, .linkedin:hover {
@@ -122,10 +125,14 @@ p.about-member {
 }
 
 .icon-social-linkedin {
-    color: #353535;
+    color: #265443;
     text-decoration: none;
     margin-left: 18px;
     margin-right: 18px;
+}
+
+.icon-social-linkedin:hover {
+    color: #5D9F9E;
 }
 
 .portfolio, .portfolio > a, .portfolio:hover {
@@ -133,10 +140,14 @@ p.about-member {
 }
 
 .icon-globe {
-    color: #353535;
+    color: #265443;
     text-decoration: none;
     margin-left: 18px;
     margin-right: 18px;
+}
+
+.icon-globe:hover {
+    color: #5D9F9E;
 }
 
 @media (min-width: 768px) and (max-width: 1023px){
@@ -222,13 +233,13 @@ p.about-member {
     }
 
     .icon-social-github {
-        margin-left: 50px;
+        margin-left: 5px;
         margin-right: 4px;
         font-size: 30px;
     }
 
     .icon-social-linkedin {
-        margin-left: 4px;
+        margin-left: 50px;
         margin-right: 4px;
         font-size: 30px;
     }
