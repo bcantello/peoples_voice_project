@@ -13,8 +13,8 @@ export default function OfficeListItem(props) {
 	}
 
 	return (
-		<div>
-			<div className={'elected-official'} onClick={handleOfficialClick}>{official}</div>
+		<div className={'elected-official-container'}>
+			<span className={'elected-official'} onClick={handleOfficialClick}>{official}</span>
 		</div>
 	);
 };

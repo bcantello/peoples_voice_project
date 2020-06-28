@@ -1,4 +1,4 @@
-.officials-search-results-wrapper {
+.officials-search-results-wrapper, .office-search-results-wrapper {
     max-width: 1000px;
     margin: 2em auto;
     width: 85%;
@@ -7,7 +7,10 @@
     box-shadow: 20px 25px 13px -20px rgba(0,0,0,0.35);
     border-radius: 9px;
     padding-top: 2em;
+}
 
+.office-search-results-wrapper {
+    max-width: 800px;
 }
 
 .user-city {
@@ -15,38 +18,40 @@
     padding-bottom: 1em;
 }
 
-.elected-offices-wrapper {
-    text-align: left;
-    line-height: 1.5em;
+.elected-offices-wrapper, .elected-officials-wrapper {
+    line-height: 1.5;
+    padding-bottom: 1em;
 }
 
 #office-name {
     font-size: 1.5em;
-    padding: 2em;
+    padding-bottom: 1em;
 }
 
 .elected-office {
     cursor: pointer;
-    color: black;
+    color: #197278;
 }
 
-.elected-office-container {
+.elected-office-container, .elected-official-container {
     padding-bottom: 10px;
     text-align: center;
 }
 
 .elected-office:hover {
-    color: blue;
+    color: #5D9F9E;
+    border-bottom: #E09F3E solid 1px;
 }
 
 .elected-official {
     cursor: pointer;
-    color: black;
+    color: #197278;
     line-height: 1.5em;
 }
 
 .elected-official:hover {
-    color: blue;
+    color: #5D9F9E;
+    border-bottom: #E09F3E solid 1px;
 }
 
 .official-details-wrapper {

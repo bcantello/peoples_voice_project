@@ -13,9 +13,9 @@ export default function OfficeList() {
 	});
 
 	return (
-		<div>
+		<div className={'office-search-results-wrapper'}>
 			<div id={'office-name'}>{sessionStorage.getItem('office')}s</div>
-			<div>{electedOfficialArray}</div>
+			<div className={'elected-officials-wrapper'}>{electedOfficialArray}</div>
 		</div>
 	);
 };
