@@ -8,6 +8,7 @@
 
 #about-content {
     width: 95%;
+    max-width: 1500px;
     margin: 10vh auto;
 }
 
@@ -22,7 +23,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 2em;
+    padding: 2em 2em 0 2em;
 }
 
 .member-1 {
@@ -31,15 +32,7 @@
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 24px;
-}
-
-/* INDIVIDUAL TEAM MEMBERS */
-.member-1 {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 24px;
+    padding: 3em 0;
 }
 
 .member-2 {
@@ -48,6 +41,7 @@
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 24px;
+    padding: 3em 0;
 }
 
 /* TEAM MEMBER CONTENT ITEMS */
@@ -171,7 +165,6 @@ p.about-member {
 
     p.about-member {
         margin: 20px;
-        margin-left: 50px;
     }
 
     .icon-social-github {

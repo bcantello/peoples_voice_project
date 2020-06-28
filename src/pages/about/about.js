@@ -3,8 +3,9 @@ import './about.css';
 
 export default function About() {
 	return (
-		<div  id={'about-content'}>
-			<p id={'statement-of-purpose'}>The People's Voice Project exists to amplify the voices of each and every person through
+		<div id={'about-content'}>
+			<p id={'statement-of-purpose'}>The People's Voice Project exists to amplify the voices of each and every
+				person through
 				direct access to the elected officials who represent them. After all, a government of the people, by the
 				people, and for the people, must hear from the people! </p>
 			<div className="team-members">
@@ -17,16 +18,16 @@ export default function About() {
 					</div>
 					<p className="about-member">Shortly after graduating from the <a
 						href="https://www.physics.ucsb.edu/" target="_blank" rel="nofollow noopener noreferrer"
-						style={{textDecoration: 'none'}}>University of California Santa Barbara</a> , I joined the
+						style={{textDecoration: 'none', color: '#197278'}}>University of California Santa Barbara</a> , I joined the
 						engineering team at <a href="https://www.payjunction.com/payments/" target="_blank"
 						                       rel="nofollow noopener noreferrer"
-						                       style={{textDecoration: 'none'}}>PayJunction</a> as a
+						                       style={{textDecoration: 'none', color: '#197278'}}>PayJunction</a> as a
 						software engineer. While there I further honed my skills as an engineer in a test driven
 						development environment, utilizing technologies like Java, Javascript, Angular.js and HTML/CSS.
 						In an effort to further grow my developer skill set I then enrolled in a software engineering
 						intensive boot camp through <a href="https://generalassemb.ly/" target="_blank"
 						                               rel="nofollow noopener noreferrer"
-						                               style={{textDecoration: 'none'}}>General Assembly</a>. During the
+						                               style={{textDecoration: 'none', color: '#197278'}}>General Assembly</a>. During the
 						boot camp I was able to add Python, Django, React, Node.js, Express, MongoDB, and PostgreSQL to
 						my repertoire. Currently I'm a software engineer based in Santa Barbara CA. I enjoy building
 						user centric applications and websites that are as intuitive as they are dynamic.</p>
