@@ -1,14 +1,3 @@
-#about-content {
-    width: 95%;
-    margin: 20vh auto;
-}
-
-#statement-of-purpose {
-    font-size: 1.5em;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 *{
@@ -17,31 +6,23 @@
     box-sizing: border-box;
 }
 
-.about-team-body {
-    background-color: white;
-    margin-top: 25px;
+#about-content {
+    width: 95%;
+    margin: 10vh auto;
 }
 
-h1.abouth1 {
-    color: #E56C4E;
-    font-size: 28px;
-    font-weight: 600;
-    margin-top: 25px;
-    margin-bottom: 13px;
-}
-
-p.about-team {
-    color: #A9A9A9;
-    text-align: center;
-    margin-bottom: 25px;
+#statement-of-purpose {
+    font-size: 1.5em;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: rgb(107, 98, 98);
 }
 
 .team-members {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 2em;
 }
 
 .member-1 {
@@ -104,7 +85,7 @@ h3.member-title {
 }
 
 p.about-member {
-    color: #A9A9A9;
+    color: rgb(107, 98, 98);
     text-align: left;
     margin-top: 4px;
     margin-bottom: 18px;
@@ -170,83 +151,42 @@ p.about-member {
         grid-template-columns: repeat(2,.5fr);
         grid-template-rows: repeat(1,.5fr);
         margin: 15px;
-        padding-top: 50px;
+        padding-top: 5em;
     }
 
     .member-photo {
         display: flex;
-        border-radius: 50%;
-        background-color: #A9A9A9;
-        width: 55px;
-        height: 55px;
-        margin-top: 10px;
-        margin-bottom: 10px;
         margin-left: 50px;
     }
 
     h2.member-name {
-        color: #E56C4E;
         font-size: 25px;
-        font-weight: 600;
-        text-align: left;
         margin-left: 23px;
     }
 
     h3.member-title {
-        color: #A9A9A9;
-        font-style: italic;
         font-size: 20px;
-        font-weight: 400;
-        text-align: left;
-        margin-bottom: 6px;
         margin-left: 23px;
     }
 
     p.about-member {
-        color: #A9A9A9;
-        text-align: left;
         margin: 20px;
         margin-left: 50px;
     }
 
-    body.about-team-body {
-        background-color: white;
-        margin-top: 40px;
-    }
-
-    h1.abouth1 {
-        color: #E56C4E;
-        font-size: 40px;
-        font-weight: 600;
-        margin-top: 25px;
-        margin-bottom: 13px;
-    }
-
-    p.about-team {
-        color: #A9A9A9;
-        text-align: center;
-        margin-bottom: 25px;
-    }
-
     .icon-social-github {
-        color: #353535;
-        text-decoration: none;
         margin-left: 50px;
         margin-right: 19px;
         font-size: 20px;
     }
 
     .icon-social-linkedin {
-        color: #353535;
-        text-decoration: none;
         margin-left: 4px;
         margin-right: 19px;
         font-size: 20px;
     }
 
     .icon-globe {
-        color: #353535;
-        text-decoration: none;
         margin-left: 5px;
         margin-right: 19px;
         font-size: 20px;
@@ -257,106 +197,52 @@ p.about-member {
     .team-members{
         display: grid;
         grid-template-columns: repeat(2,.5fr);
-        grid-template-rows: repeat(2,.5fr);
+        grid-template-rows: repeat(1,.5fr);
         margin-left: 40px;
-        padding-top: 50px;
+        padding-top: 5em;
     }
 
     .member-photo {
-        display: flexbox;
-        border-radius: 50%;
-        background-color: #A9A9A9;
+        display: flex;
         width: 80px;
         height: 80px;
-        margin-top: 10px;
-        margin-bottom: 10px;
         margin-left: 50px;
     }
 
     h2.member-name {
-        color: #E56C4E;
         font-size: 25px;
-        font-weight: 600;
-        text-align: left;
         margin-left: 12px;
         margin-bottom: 10px;
     }
 
     h3.member-title {
-        color: #A9A9A9;
-        font-style: italic;
         font-size: 22px;
-        font-weight: 400;
-        text-align: left;
-        margin-bottom: 6px;
         margin-left: 12px;
     }
 
     p.about-member {
-        /* color: #A9A9A9; */
         color: rgb(107, 98, 98);
-        text-align: left;
         margin: 20px;
         margin-left: 50px;
         margin-right: 100px;
         font-size: 20px;
     }
 
-    body.about-team-body {
-        background-color: white;
-        margin-top: 40px;
-    }
-
-    h1.abouth1 {
-        color: #E56C4E;
-        font-size: 50px;
-        font-weight: 600;
-        margin-top: 25px;
-        margin-bottom: 13px;
-    }
-
-    p.about-team {
-        color: #A9A9A9;
-        text-align: center;
-        margin-bottom: 25px;
-    }
-
     .icon-social-github {
-        color: #353535;
-        text-decoration: none;
         margin-left: 50px;
         margin-right: 4px;
         font-size: 30px;
     }
 
     .icon-social-linkedin {
-        color: #353535;
-        text-decoration: none;
         margin-left: 4px;
         margin-right: 4px;
         font-size: 30px;
     }
 
     .icon-globe {
-        color: #353535;
-        text-decoration: none;
         margin-left: 5px;
         margin-right: 4px;
         font-size: 30px;
-    }
-
-    h1.abouth1 {
-        color: #E56C4E;
-        font-size: 40px;
-        font-weight: 600;
-        margin-top: 25px;
-        margin-bottom: 13px;
-    }
-
-    p.about-team {
-        color: #A9A9A9;
-        text-align: center;
-        margin-bottom: 25px;
-        font-size: 25px;
     }
 }
