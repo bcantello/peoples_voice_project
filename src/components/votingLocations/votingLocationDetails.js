@@ -48,7 +48,7 @@ export default function VotingLocationDetails() {
 
 	return (
 		<div className={'election-container'}>
-			<div className={'election-user-address'}>Upcoming elections for
+			<div className={'election-user-address'}>Upcoming elections
 				for {address.line1}, {address.city}, {address.zip}</div>
 			<div className={'election-name'}>{universalContext.pollingLocations.data.election.name}</div>
 			<div className={'election-day'}>Election day: {universalContext

@@ -53,7 +53,7 @@ export default function StateResourcesListItem(props) {
 	if (localResources.electionOfficials[0] !== undefined) {
 		localResourceArr.push(
 			<div>
-				<div>Election Officials:</div>
+				<div className={'resources-subtitle'}>Election Officials:</div>
 				<div>{localOfficialsArr}</div>
 			</div>
 		);
