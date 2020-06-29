@@ -7,6 +7,7 @@
     background: rgba(249, 247, 247, 0.9);
     box-shadow: 20px 25px 13px -20px rgba(0,0,0,0.35);
     border-radius: 9px;
+    padding-bottom: 1em;
 }
 
 #election-user-address {
@@ -17,6 +18,7 @@
 
 #polling-locations-title, #early-voting-sites-title {
     font-weight: bold;
+    font-size: 1.5em;
     padding: 1em;
 }
 
@@ -24,10 +26,22 @@
     padding-bottom: 1.5em;
 }
 
-.early-vote-location-address {
+/*.early-vote-location-address {*/
+/*    !*padding-bottom: 1em;*!*/
+/*}*/
+
+/*.early-vote-location-dates {*/
+/*    !*padding-bottom: .5em;*!*/
+/*}*/
+
+.early-vote-location-notes {
     padding-bottom: 1em;
 }
 
-.early-vote-location-dates {
-    padding-bottom: .5em;
+.polling-location-details {
+    padding: 1em;
+}
+
+.site-name {
+    font-weight: bold;;
 }

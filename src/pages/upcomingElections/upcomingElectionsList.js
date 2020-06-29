@@ -19,6 +19,9 @@ export default function UpcomingElectionsList() {
 	});
 
 	return (
-		<div id={'upcoming-elections-wrapper'}>{electionsArr}</div>
+		<div id={'upcoming-elections-wrapper'}>
+			<div id={'upcoming-elections-title'}>All Upcoming Elections</div>
+			{electionsArr}
+		</div>
 	);
 };

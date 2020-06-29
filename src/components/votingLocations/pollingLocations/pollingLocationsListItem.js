@@ -21,7 +21,7 @@ export default function PollingLocationsListItem(props) {
 	return (
 		<div className={'polling-location-details'}>
 			<div className={'polling-location-address'}>
-				<div>{address.locationName}</div>
+				<div className={'site-name'}>{address.locationName}</div>
 				<div>{address.line1}</div>
 				<div>{address.city}, {address.state} {address.zip}</div>
 			</div>
