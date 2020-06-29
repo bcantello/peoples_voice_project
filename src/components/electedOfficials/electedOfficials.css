@@ -54,6 +54,13 @@
     border-bottom: #E09F3E solid 1px;
 }
 
+/* .official-details-page {
+    background-image: url('../../assets/background.svg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+} */
+
 .official-details-wrapper {
     max-width: 1200px;
     width: 80%;
@@ -74,7 +81,7 @@
 #official-name {
     font-size: 1.5em;
     font-weight: 800;
-    color: #E8B973;
+    color: #E09F3E;
 }
 
 #official-party {
