@@ -27,6 +27,7 @@
 .voting-sites-link:hover {
     color: #5D9F9E;
     border-bottom: solid 1px #E09F3E;
+    cursor: pointer;
 }
 
 .polling-locations-title, #early-voting-sites-title {
