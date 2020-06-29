@@ -5,6 +5,11 @@ import '../electedOfficials.css';
 import Address from '../../../assets/icons/address.svg';
 import Phone from '../../../assets/icons/phone.svg';
 import Website from '../../../assets/icons/website.svg';
+import Email from '../../../assets/icons/email.svg';
+
+import Facebook from '../../../assets/icons/facebook.svg';
+import Twitter from '../../../assets/icons/twitter.svg';
+import YouTube from '../../../assets/icons/youtube.svg';
 
 export default function ElectedOfficialDetails() {
 	const universalContext = useContext(UniversalContext);
@@ -14,7 +19,7 @@ export default function ElectedOfficialDetails() {
 	const officialData = [];
 
 	if (official.name !== undefined) {
-		officialName.push(<div id={'official-name'}>{official.name}: {official.party}</div>);
+		officialName.push(<><div id={'official-name'}>{official.name}</div><div id={'official-party'}>{official.party}</div></>);
 	}
 
 	if (official.photoUrl !== undefined) {
@@ -31,18 +36,19 @@ export default function ElectedOfficialDetails() {
 	}
 
 	if (official.emails !== undefined) {
-		officialData.push(<div>Email: <a id={'official-email'} href={`mailto:${official.emails}`}>{official.emails}</a></div>);
+		officialData.push(<div id={'official-email'}><img id={'officials-icon'} src={Email} alt={'email'}/><a id={'official-email'} href={`mailto:${official.emails}`}>{official.emails}</a></div>);
 	}
 
 	if (official.urls !== undefined) {
-		officialData.push(<div><img id={'officials-icon'} src={Website} alt={'website'}/><a id={'official-website'} href={official.urls} target="_blank" rel="nofollow noopener noreferrer">{official.urls}</a></div>);
+		officialData.push(<div id={'official-website'}><img id={'officials-icon'} src={Website} alt={'website'}/><a id={'official-website'} href={official.urls} target="_blank" rel="nofollow noopener noreferrer">{official.urls}</a></div>);
 	}
 
 	if (official.channels !== undefined) {
 		for (let i = 0; i < official.channels.length; i++) {
 			if (official.channels[i].type === "Facebook") {
 				officialData.push(
-					<div>{official.channels[i].type}:
+					<div className={'details-social'}>
+						<img id={'officials-icon'} src={Facebook} alt={'facebook'}/>
 						<a className={'official-social'}
 						   href={`https://www.facebook.com/${official.channels[i].id}`}
 						   target="_blank"
@@ -53,7 +59,8 @@ export default function ElectedOfficialDetails() {
 			}
 			if (official.channels[i].type === "Twitter") {
 				officialData.push(
-					<div>{official.channels[i].type}:
+					<div className={'details-social'}>
+						<img id={'officials-icon'} src={Twitter} alt={'twitter'}/>
 						<a className={'official-social'}
 						   href={`https://twitter.com/${official.channels[i].id}`}
 						   target="_blank"
@@ -64,7 +71,8 @@ export default function ElectedOfficialDetails() {
 			}
 			if (official.channels[i].type === "YouTube") {
 				officialData.push(
-					<div>{official.channels[i].type}:
+					<div className={'details-social'}>
+						<img id={'officials-icon'} src={YouTube} alt={'youtube'}/>
 						<a className={'official-social'}
 						   href={`https://www.youtube.com/user/${official.channels[i].id}`}
 						   target="_blank"
