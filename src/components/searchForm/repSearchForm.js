@@ -36,7 +36,7 @@ export default function RepSearchForm() {
 			if (res.status === 200) {
 				universalContext.setPollingLocations(res);
 				sessionStorage.setItem('pollingLocations', JSON.stringify(res));
-				history.push('/pollingLocationDetails');
+				history.push('/votingLocations');
 			} else {
 				document.getElementById('error-response')
 					.innerHTML = "Either an incorrect address was entered, or there are no upcoming elections for this location."
