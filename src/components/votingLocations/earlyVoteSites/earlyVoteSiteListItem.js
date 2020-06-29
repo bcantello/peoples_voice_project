@@ -7,7 +7,7 @@ export default function EarlyVoteSitesListItem(props) {
 	const notes = [];
 
 	if (props.element.pollingHours !== undefined) {
-		const pollingHoursArr = props.element.pollingHours.split(';');
+		const pollingHoursArr = props.element.pollingHours.split('\n');
 		for (let i = 0; i < pollingHoursArr.length; i++) {
 			hours.push(
 				<div>{pollingHoursArr[i]}</div>
@@ -22,7 +22,7 @@ export default function EarlyVoteSitesListItem(props) {
 	return (
 		<div className={'early-vote-location-details'}>
 			<div className={'early-vote-location-address'}>
-				<div>{address.locationName}</div>
+				<div className={'site-name'}>{address.locationName}</div>
 				<div>{address.line1}</div>
 				<div>{address.city}, {address.state} {address.zip}</div>
 			</div>

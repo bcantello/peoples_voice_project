@@ -32,10 +32,6 @@ export default function About() {
 						my repertoire. Currently I'm a software engineer based in Santa Barbara CA. I enjoy building
 						user centric applications and websites that are as intuitive as they are dynamic.</p>
 					<div className="social-links">
-						<div className="github">
-							<a href="https://github.com/bcantello" target="_blank" rel="nofollow noopener noreferrer"
-							   title="GitHub"><i className="icon-social-github"></i></a>
-						</div>
 						<div className="linkedin">
 							<a href="https://www.linkedin.com/in/brandon-cantello/" target="_blank"
 							   rel="nofollow noopener noreferrer" title="LinkedIn"><i
@@ -44,6 +40,10 @@ export default function About() {
 						<div className="portfolio">
 							<a href="http://brandoncantello.com/" target="_blank" rel="nofollow noopener noreferrer"
 							   title="Portfolio"><i className="icon-globe"></i></a>
+						</div>
+						<div className="github">
+							<a href="https://github.com/bcantello" target="_blank" rel="nofollow noopener noreferrer"
+							   title="GitHub"><i className="icon-social-github"></i></a>
 						</div>
 					</div>
 				</div>
@@ -60,10 +60,6 @@ export default function About() {
 						meh salvia art party you probably haven't heard of them sartorial. Etsy franzen pork belly
 						williamsburg heirloom.</p>
 					<div className="social-links">
-						<div className="github">
-							<a href="https://github.com/carlynicholson" target="_blank"
-							   rel="nofollow noopener noreferrer" title="GitHub"><i className="icon-social-github"></i></a>
-						</div>
 						<div className="linkedin">
 							<a href="https://www.linkedin.com/in/carlypnicholson/" target="_blank"
 							   rel="nofollow noopener noreferrer" title="LinkedIn"><i
@@ -72,6 +68,10 @@ export default function About() {
 						<div className="portfolio">
 							<a href="https://carlynicholson.github.io/portfolio/" target="_blank"
 							   rel="nofollow noopener noreferrer" title="Portfolio"><i className="icon-globe"></i></a>
+						</div>
+						<div className="github">
+							<a href="https://github.com/carlynicholson" target="_blank"
+							   rel="nofollow noopener noreferrer" title="GitHub"><i className="icon-social-github"></i></a>
 						</div>
 					</div>
 				</div>
