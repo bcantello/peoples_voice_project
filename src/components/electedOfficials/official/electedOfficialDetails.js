@@ -2,6 +2,10 @@ import React, {useContext} from "react";
 import {UniversalContext} from "../../../App";
 import '../electedOfficials.css';
 
+import Address from '../../../assets/icons/address.svg';
+import Phone from '../../../assets/icons/phone.svg';
+import Website from '../../../assets/icons/website.svg';
+
 export default function ElectedOfficialDetails() {
 	const universalContext = useContext(UniversalContext);
 	const official = universalContext.officials.data.officials[sessionStorage.getItem('officialIndex')];
@@ -19,11 +23,11 @@ export default function ElectedOfficialDetails() {
 
 	if (official.address !== undefined) {
 		const address = official.address[0];
-		officialData.push(<div id={'official-address'}>Address: {address.line1}, {address.city} {address.state}, {address.zip}</div>);
+		officialData.push(<div id={'official-address'}><img id={'officials-icon'} src={Address} alt={'address'}/>{address.line1}, {address.city} {address.state}, {address.zip}</div>);
 	}
 
 	if (official.phones !== undefined) {
-		officialData.push(<div id={'official-phone'}>Phone: {official.phones}</div>)
+		officialData.push(<div id={'official-phone'}><img id={'officials-icon'} src={Phone} alt={'phone'}/>{official.phones}</div>)
 	}
 
 	if (official.emails !== undefined) {
@@ -31,7 +35,7 @@ export default function ElectedOfficialDetails() {
 	}
 
 	if (official.urls !== undefined) {
-		officialData.push(<div>Website: <a id={'official-website'} href={official.urls} target="_blank" rel="nofollow noopener noreferrer">{official.urls}</a></div>);
+		officialData.push(<div><img id={'officials-icon'} src={Website} alt={'website'}/><a id={'official-website'} href={official.urls} target="_blank" rel="nofollow noopener noreferrer">{official.urls}</a></div>);
 	}
 
 	if (official.channels !== undefined) {
