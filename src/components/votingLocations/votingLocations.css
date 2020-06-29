@@ -57,3 +57,10 @@
     font-weight: bold;
     font-size: 1.15em;
 }
+
+#officials-icon {
+    max-width: 20px;
+    max-height: 20px;
+    padding-right: 3px;
+    margin-right: 8px;
+}

@@ -1,4 +1,6 @@
 import React from "react";
+import Email from '../../../assets/icons/email.svg';
+import '../votingLocations.css';
 
 export default function StateResourcesListItem(props) {
 	console.log(props)
@@ -31,7 +33,7 @@ export default function StateResourcesListItem(props) {
 
 	if (localResources.electionOfficials[0].emailAddress !== undefined) {
 		localOfficialsArr.push(
-			<div>Email: <a
+			<div><img src={Email} alt={'email'} id={'officials-icon'}/> <a
 				href={`mailto:${localResources.electionOfficials[0].emailAddress}`}>{localResources.electionOfficials[0].emailAddress}</a>
 			</div>
 		);

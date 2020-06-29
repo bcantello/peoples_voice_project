@@ -13,7 +13,8 @@ export default function PollingLocationsDetails() {
 	if (universalContext.pollingLocations.data.earlyVoteSites !== undefined) {
 		earlyVoteArr.push(
 			<div>
-				<span className={'voting-sites-link'} onClick={() => history.push('/earlyVoteSites')}>View Early Voting Sites</span>
+				<span className={'voting-sites-link'} onClick={() => history
+					.push('/earlyVoteSites')}>View Early Voting Sites</span>
 			</div>
 		);
 	}
@@ -21,7 +22,8 @@ export default function PollingLocationsDetails() {
 	if (universalContext.pollingLocations.data.dropOffLocations !== undefined) {
 		DropOffArr.push(
 			<div>
-				<span className={'voting-sites-link'} onClick={() => history.push('/dropOffSites')}>View Drop Off Sites</span>
+				<span className={'voting-sites-link'} onClick={() => history
+					.push('/dropOffSites')}>View Drop Off Sites</span>
 			</div>
 		);
 	}
@@ -31,10 +33,17 @@ export default function PollingLocationsDetails() {
 			<div className={'election-user-address'}>Upcoming elections for
 				for {address.line1}, {address.city}, {address.zip}</div>
 			<div className={'election-name'}>{universalContext.pollingLocations.data.election.name}</div>
-			<div className={'election-day'}>Election day: {universalContext.pollingLocations.data.election.electionDay}</div>
+			<div className={'election-day'}>Election day: {universalContext
+				.pollingLocations
+				.data
+				.election
+				.electionDay}
+			</div>
 			<div className={'location-links-container'}>
 				{earlyVoteArr}
 				{DropOffArr}
+				<span className={'voting-sites-link'} onClick={() => history
+					.push('/additionalResources')}>Additional Resources</span>
 			</div>
 			<div className={'polling-locations-title'}>Polling Locations:</div>
 			<PollingLocationsList/>
