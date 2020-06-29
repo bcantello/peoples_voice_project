@@ -11,6 +11,7 @@ import Contact from "../pages/contact/contact";
 import DropOffLocationsDetails from "./votingLocations/dropOffLocations/dropOffLocationsDetails";
 import EarlyVoteSiteDetails from "./votingLocations/earlyVoteSites/earlyVoteSiteDetails";
 import PollingLocationsDetails from "./votingLocations/pollingLocations/pollingLocationsDetails";
+import AdditionResourceDetails from "./votingLocations/additionalResources/additionalResourcesDetails";
 
 export default function Main() {
 	return (
@@ -27,6 +28,7 @@ export default function Main() {
 			<Route exact path={'/dropOffSites'} component={DropOffLocationsDetails}/>
 			<Route exact path={'/earlyVoteSites'} component={EarlyVoteSiteDetails}/>
 			<Route exact path={'/pollingLocations'} component={PollingLocationsDetails}/>
+			<Route exact path={'/additionalResources'} component={AdditionResourceDetails}/>
 			<Redirect to='/home'/>
 		</Switch>
 	);
