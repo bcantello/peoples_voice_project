@@ -76,7 +76,7 @@ function App() {
                       setPollingLocations,
                       userIpInfo,
                       electionInfo,
-                      addressFormatter,
+                      addressFormatter
                   }
               }>
                   <Main/>
