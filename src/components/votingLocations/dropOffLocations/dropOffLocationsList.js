@@ -16,6 +16,6 @@ export default function DropOffLocationsList() {
 	}
 
 	return (
-		<div id={'early-vote-locations-wrapper'}>{dropOffLocationsArr}</div>
+		<div className={'early-vote-locations-wrapper'}>{dropOffLocationsArr}</div>
 	);
 }

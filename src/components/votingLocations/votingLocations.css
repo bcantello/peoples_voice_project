@@ -1,4 +1,4 @@
-#election-container {
+.election-container {
     max-width: 1000px;
     margin: 2em auto;
     width: 85%;
@@ -10,19 +10,32 @@
     padding-bottom: 1em;
 }
 
-#election-user-address {
+.election-user-address {
     font-weight: bold;
     font-size: 1.25em;
     padding: 1em;
 }
 
-#polling-locations-title, #early-voting-sites-title {
+.election-day {
+    padding-bottom: 1em;
+}
+
+.voting-sites-link {
+    color: #197278;
+}
+
+.voting-sites-link:hover {
+    color: #5D9F9E;
+    border-bottom: solid 1px #E09F3E;
+}
+
+.polling-locations-title, #early-voting-sites-title {
     font-weight: bold;
     font-size: 1.5em;
     padding: 1em;
 }
 
-#early-vote-locations-wrapper {
+.early-vote-locations-wrapper {
     padding-bottom: 1.5em;
 }
 
