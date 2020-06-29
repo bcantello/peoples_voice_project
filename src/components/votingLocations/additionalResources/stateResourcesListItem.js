@@ -1,5 +1,6 @@
 import React from "react";
 import Email from '../../../assets/icons/email.svg';
+import Phone from '../../../assets/icons/phone.svg'
 import '../votingLocations.css';
 
 export default function StateResourcesListItem(props) {
@@ -17,7 +18,8 @@ export default function StateResourcesListItem(props) {
 			<div>
 				Election Information: <a href={localResources.electionInfoUrl}
 				                         target={'_blank'}
-				                         rel={'nofollow noopener noreferrer'}>{localResources.electionInfoUrl}</a>
+				                         rel={'nofollow noopener noreferrer'}
+				                         className={'resources-link'}>{localResources.electionInfoUrl}</a>
 			</div>
 		);
 	}
@@ -34,14 +36,17 @@ export default function StateResourcesListItem(props) {
 	if (localResources.electionOfficials[0].emailAddress !== undefined) {
 		localOfficialsArr.push(
 			<div><img src={Email} alt={'email'} id={'officials-icon'}/> <a
-				href={`mailto:${localResources.electionOfficials[0].emailAddress}`}>{localResources.electionOfficials[0].emailAddress}</a>
+				href={`mailto:${localResources.electionOfficials[0].emailAddress}`}
+				className={'resources-link'}>{localResources.electionOfficials[0].emailAddress}</a>
 			</div>
 		);
 	}
 
 	if (localResources.electionOfficials[0].officePhoneNumber !== undefined) {
 		localOfficialsArr.push(
-			<div>Phone: {localResources.electionOfficials[0].officePhoneNumber}</div>
+			<div><img src={Phone}
+			          alt={'phone'}
+			          id={'officials-icon'}/> {localResources.electionOfficials[0].officePhoneNumber}</div>
 		);
 	}
 
@@ -58,7 +63,8 @@ export default function StateResourcesListItem(props) {
 		additionalResourceArr.push(
 			<div>Absentee Voting Information: <a href={stateResources.absenteeVotingInfoUrl}
 			                                     target={'_blank'}
-			                                     rel={'nofollow noopener noreferrer'}>{stateResources.absenteeVotingInfoUrl}</a>
+			                                     rel={'nofollow noopener noreferrer'}
+			                                     className={'resources-link'}>{stateResources.absenteeVotingInfoUrl}</a>
 			</div>
 		);
 	}
@@ -67,7 +73,8 @@ export default function StateResourcesListItem(props) {
 		additionalResourceArr.push(
 			<div>Ballot Information: <a href={stateResources.ballotInfoUrl}
 			                            target={'_blank'}
-			                            rel={'nofollow noopener noreferrer'}>{stateResources.ballotInfoUrl}</a></div>
+			                            rel={'nofollow noopener noreferrer'}
+			                            className={'resources-link'}>{stateResources.ballotInfoUrl}</a></div>
 		);
 	}
 
@@ -75,7 +82,8 @@ export default function StateResourcesListItem(props) {
 		additionalResourceArr.push(
 			<div>Election Information: <a href={stateResources.electionInfoUrl}
 			                              target={'_blank'}
-			                              rel={'nofollow noopener noreferrer'}>{stateResources.electionInfoUrl}</a>
+			                              rel={'nofollow noopener noreferrer'}
+			                              className={'resources-link'}>{stateResources.electionInfoUrl}</a>
 			</div>
 		);
 	}
@@ -83,8 +91,9 @@ export default function StateResourcesListItem(props) {
 	if (stateResources.electionRegistrationConfirmationUrl !== undefined) {
 		additionalResourceArr.push(
 			<div>Voter Registration Confirmation: <a href={stateResources.electionRegistrationConfirmationUrl}
-			                            target={'_blank'}
-			                            rel={'nofollow noopener noreferrer'}>{stateResources.electionRegistrationConfirmationUrl}</a>
+			                                         target={'_blank'}
+			                                         rel={'nofollow noopener noreferrer'}
+			                                         className={'resources-link'}>{stateResources.electionRegistrationConfirmationUrl}</a>
 			</div>
 		);
 	}
@@ -92,8 +101,9 @@ export default function StateResourcesListItem(props) {
 	if (stateResources.electionRegistrationUrl !== undefined) {
 		additionalResourceArr.push(
 			<div>Voter Registration Information: <a href={stateResources.electionRegistrationUrl}
-			                              target={'_blank'}
-			                              rel={'nofollow noopener noreferrer'}>{stateResources.electionRegistrationUrl}</a>
+			                                        target={'_blank'}
+			                                        rel={'nofollow noopener noreferrer'}
+			                                        className={'resources-link'}>{stateResources.electionRegistrationUrl}</a>
 			</div>
 		);
 	}
@@ -101,8 +111,9 @@ export default function StateResourcesListItem(props) {
 	if (stateResources.electionRulesUrl !== undefined) {
 		additionalResourceArr.push(
 			<div>Election Rules: <a href={stateResources.electionRulesUrl}
-			                              target={'_blank'}
-			                              rel={'nofollow noopener noreferrer'}>{stateResources.electionRulesUrl}</a>
+			                        target={'_blank'}
+			                        rel={'nofollow noopener noreferrer'}
+			                        className={'resources-link'}>{stateResources.electionRulesUrl}</a>
 			</div>
 		);
 	}
@@ -110,17 +121,18 @@ export default function StateResourcesListItem(props) {
 	if (stateResources.votingLocationFinderUrl !== undefined) {
 		additionalResourceArr.push(
 			<div>Voting Location Finder: <a href={stateResources.votingLocationFinderUrl}
-			                              target={'_blank'}
-			                              rel={'nofollow noopener noreferrer'}>{stateResources.votingLocationFinderUrl}</a>
+			                                target={'_blank'}
+			                                rel={'nofollow noopener noreferrer'}
+			                                className={'resources-link'}>{stateResources.votingLocationFinderUrl}</a>
 			</div>
 		);
 	}
 
 	return (
-		<div>
-			<div>Local Resources</div>
+		<div className={'resources-wrapper'}>
+			<div className={'local-resources-title'}>Local Resources</div>
 			{localResourceArr}
-			<div>Additional Resources</div>
+			<div className={'additional-resources-title'}>Additional Resources</div>
 			{additionalResourceArr}
 		</div>
 	);
