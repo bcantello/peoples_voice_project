@@ -8,6 +8,9 @@ import About from "../pages/about/about";
 import VotingLocationDetails from "./votingLocations/votingLocationDetails";
 import UpcomingElections from "../pages/upcomingElections/upcompingElections";
 import Contact from "../pages/contact/contact";
+import DropOffLocationsDetails from "./votingLocations/dropOffLocations/dropOffLocationsDetails";
+import EarlyVoteSiteDetails from "./votingLocations/earlyVoteSites/earlyVoteSiteDetails";
+import PollingLocationsDetails from "./votingLocations/pollingLocations/pollingLocationsDetails";
 
 export default function Main() {
 	return (
@@ -20,7 +23,10 @@ export default function Main() {
 			<Route exact path="/electedOffices" component={RepSearchResults}/>
 			<Route exact path="/office" component={OfficeList}/>
 			<Route exact path="/official" component={ElectedOfficialDetails}/>
-			<Route exact path={"/pollingLocationDetails"} component={VotingLocationDetails}/>
+			<Route exact path={"/votingLocations"} component={VotingLocationDetails}/>
+			<Route exact path={'/dropOffSites'} component={DropOffLocationsDetails}/>
+			<Route exact path={'/earlyVoteSites'} component={EarlyVoteSiteDetails}/>
+			<Route exact path={'/pollingLocations'} component={PollingLocationsDetails}/>
 			<Redirect to='/home'/>
 		</Switch>
 	);

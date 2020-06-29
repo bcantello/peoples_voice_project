@@ -1,21 +1,20 @@
 import React, {useContext} from "react";
 import {UniversalContext} from "../../App";
 import PollingLocationsList from "./pollingLocations/pollingLocationsList";
-import EarlyVoteSitesList from "./earlyVoteSites/earlyVoteSiteList";
 import './votingLocations.css'
-import DropOffLocationsList from "./dropOffLocations/dropOffLocationsList";
+import history from "../../history";
 
 export default function VotingLocationDetails() {
 	const universalContext = useContext(UniversalContext);
 	const address = universalContext.pollingLocations.data.normalizedInput;
 	const earlyVoteArr = [];
 	const dropOffArr = [];
+	const pollingLocationsArr = [];
 
 	if (universalContext.pollingLocations.data.earlyVoteSites !== undefined) {
 		earlyVoteArr.push(
 			<div>
-				<div id={'early-voting-sites-title'}>Early Voting Sites</div>
-				<EarlyVoteSitesList/>
+				<span id={'early-voting-sites-link'} onClick={() => history.push('/earlyVoteSites')}>View Early Voting Sites</span>
 			</div>
 		);
 	}
@@ -23,8 +22,22 @@ export default function VotingLocationDetails() {
 	if (universalContext.pollingLocations.data.dropOffLocations !== undefined) {
 		dropOffArr.push(
 			<div>
-				<div id={'early-voting-sites-title'}>Drop Off Locations</div>
-				<DropOffLocationsList/>
+				<span id={'early-voting-sites-link'} onClick={() => history.push('/dropOffSites')}>View Drop Off Locations</span>
+			</div>
+		);
+	}
+
+	if ((universalContext.pollingLocations.data.earlyVoteSites !== undefined) && (universalContext.pollingLocations.data.dropOffLocations !== undefined)) {
+		pollingLocationsArr.push(
+			<div>
+				<span id={'early-voting-sites-link'} onClick={() => history.push('/pollingLocations')}>View Polling Locations</span>
+			</div>
+		);
+	} else {
+		pollingLocationsArr.push(
+			<div>
+				<div id={'polling-locations-title'}>Polling Locations:</div>
+				<PollingLocationsList/>
 			</div>
 		);
 	}
@@ -37,8 +50,7 @@ export default function VotingLocationDetails() {
 			<div id={'election-day'}>Election day: {universalContext.pollingLocations.data.election.electionDay}</div>
 			{dropOffArr}
 			{earlyVoteArr}
-			<div id={'polling-locations-title'}>Polling Locations:</div>
-			<PollingLocationsList/>
+			{pollingLocationsArr}
 		</div>
 	);
 };
