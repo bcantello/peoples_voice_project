@@ -1,4 +1,4 @@
-#election-container {
+.election-container {
     max-width: 1000px;
     margin: 2em auto;
     width: 85%;
@@ -7,27 +7,53 @@
     background: rgba(249, 247, 247, 0.9);
     box-shadow: 20px 25px 13px -20px rgba(0,0,0,0.35);
     border-radius: 9px;
+    padding-bottom: 1em;
 }
 
-#election-user-address {
+.election-user-address {
     font-weight: bold;
     font-size: 1.25em;
     padding: 1em;
 }
 
-#polling-locations-title, #early-voting-sites-title {
-    font-weight: bold;
-    padding: 1em;
-}
-
-#early-vote-locations-wrapper {
-    padding-bottom: 1.5em;
-}
-
-.early-vote-location-address {
+.election-day {
     padding-bottom: 1em;
 }
 
+.voting-sites-link {
+    color: #197278;
+}
+
+.voting-sites-link:hover {
+    color: #5D9F9E;
+    border-bottom: solid 1px #E09F3E;
+    cursor: pointer;
+}
+
+.polling-locations-title, #early-voting-sites-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    padding: 1em;
+}
+
+.early-vote-locations-wrapper {
+    padding-bottom: 1.5em;
+}
+
+.early-vote-location-hours {
+    padding-bottom: 2em;
+}
+
 .early-vote-location-dates {
-    padding-bottom: .5em;
+    padding-top: .5em;
+    font-style: italic;
+}
+
+.polling-location-details {
+    padding: 1em;
+}
+
+.site-name {
+    font-weight: bold;
+    font-size: 1.15em;
 }

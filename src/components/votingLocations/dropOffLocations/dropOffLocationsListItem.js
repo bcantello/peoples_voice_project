@@ -1,12 +1,13 @@
 import React from "react";
+import '../votingLocations.css';
 
-export default function PollingLocationsListItem(props) {
+export default function DropOffLocationsListItem(props) {
 	const address = props.element.address;
 	const hours = [];
 	const notes = [];
 
 	if (props.element.pollingHours !== undefined) {
-		const pollingHoursArr = props.element.pollingHours.split(';');
+		const pollingHoursArr = props.element.pollingHours.split('\n');
 		for (let i = 0; i < pollingHoursArr.length; i++) {
 			hours.push(
 				<div>{pollingHoursArr[i]}</div>
@@ -19,14 +20,15 @@ export default function PollingLocationsListItem(props) {
 	}
 
 	return (
-		<div className={'polling-location-details'}>
-			<div className={'polling-location-address'}>
+		<div className={'early-vote-location-details'}>
+			<div className={'early-vote-location-address'}>
 				<div className={'site-name'}>{address.locationName}</div>
 				<div>{address.line1}</div>
 				<div>{address.city}, {address.state} {address.zip}</div>
-				<div className={'polling-location-notes'}>{notes}</div>
+				<div className={'early-vote-location-notes'}>{notes}</div>
 			</div>
-			<div className={'polling-location-hours'}>{hours}</div>
+			<div className={'early-vote-location-dates'}>From {props.element.startDate} to {props.element.endDate}</div>
+			<div className={'early-vote-location-hours'}>{hours}</div>
 		</div>
 	);
-};
+}

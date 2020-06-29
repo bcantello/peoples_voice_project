@@ -1,9 +1,252 @@
-#about-content {
-    width: 85%;
-    max-width: 1000px;
-    margin: 20vh auto;
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#about-content p {
+#about-content {
+    width: 95%;
+    max-width: 1500px;
+    margin: 10vh auto;
+}
+
+#statement-of-purpose {
     font-size: 1.5em;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: rgb(107, 98, 98);
+}
+
+.team-members {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2em 2em 0 2em;
+}
+
+.member-1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 3em 0;
+}
+
+.member-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 3em 0;
+}
+
+/* TEAM MEMBER CONTENT ITEMS */
+.member-photo {
+    border-radius: 50%;
+    background-color: #A9A9A9;
+    width: 55px;
+    height: 55px;
+    margin-top: 10px;
+    margin-right: 13px;
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+
+.member-content {
+    display: inline;
+}
+
+h2.member-name {
+    color: #E09F3E;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    padding-top: 4px;
+    margin-bottom: 4px;
+}
+
+h3.member-title {
+    color: #A9A9A9;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 6px;
+}
+
+p.about-member {
+    color: rgb(107, 98, 98);
+    text-align: left;
+    margin-top: 4px;
+    margin-bottom: 18px;
+}
+
+.social-links {
+    color: #353535;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    text-decoration: none;
+    margin-bottom: 13px;
+}
+
+.social-links:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.social-links:visited {
+    color: #353535;
+    text-decoration: none;
+}
+
+.github, .github > a, .github:hover {
+    text-decoration: none;
+}
+
+.icon-social-github {
+    color: #265443;
+    text-decoration: none;
+    margin-left: 18px;
+    margin-right: 18px;
+}
+
+.icon-social-github:hover {
+    color: #5D9F9E;
+}
+
+.linkedin, .linkedin > a, .linkedin:hover {
+    text-decoration: none;
+}
+
+.icon-social-linkedin {
+    color: #265443;
+    text-decoration: none;
+    margin-left: 18px;
+    margin-right: 18px;
+}
+
+.icon-social-linkedin:hover {
+    color: #5D9F9E;
+}
+
+.portfolio, .portfolio > a, .portfolio:hover {
+    text-decoration: none;
+}
+
+.icon-globe {
+    color: #265443;
+    text-decoration: none;
+    margin-left: 18px;
+    margin-right: 18px;
+}
+
+.icon-globe:hover {
+    color: #5D9F9E;
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+    .team-members{
+        display: grid;
+        grid-template-columns: repeat(2,.5fr);
+        grid-template-rows: repeat(1,.5fr);
+        margin: 15px;
+        padding-top: 5em;
+    }
+
+    .member-photo {
+        display: flex;
+        margin-left: 50px;
+    }
+
+    h2.member-name {
+        font-size: 25px;
+        margin-left: 23px;
+    }
+
+    h3.member-title {
+        font-size: 20px;
+        margin-left: 23px;
+    }
+
+    p.about-member {
+        margin: 20px;
+    }
+
+    .icon-social-github {
+        margin-left: 50px;
+        margin-right: 19px;
+        font-size: 20px;
+    }
+
+    .icon-social-linkedin {
+        margin-left: 4px;
+        margin-right: 19px;
+        font-size: 20px;
+    }
+
+    .icon-globe {
+        margin-left: 5px;
+        margin-right: 19px;
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 769px){
+    .team-members{
+        display: grid;
+        grid-template-columns: repeat(2,.5fr);
+        grid-template-rows: repeat(1,.5fr);
+        margin-left: 40px;
+        padding-top: 5em;
+    }
+
+    .member-photo {
+        display: flex;
+        width: 80px;
+        height: 80px;
+        margin-left: 50px;
+    }
+
+    h2.member-name {
+        font-size: 25px;
+        margin-left: 12px;
+        margin-bottom: 10px;
+    }
+
+    h3.member-title {
+        font-size: 22px;
+        margin-left: 12px;
+    }
+
+    p.about-member {
+        color: rgb(107, 98, 98);
+        margin: 20px;
+        margin-left: 50px;
+        margin-right: 100px;
+        font-size: 20px;
+    }
+
+    .icon-social-github {
+        margin-left: 5px;
+        margin-right: 4px;
+        font-size: 30px;
+    }
+
+    .icon-social-linkedin {
+        margin-left: 50px;
+        margin-right: 4px;
+        font-size: 30px;
+    }
+
+    .icon-globe {
+        margin-left: 5px;
+        margin-right: 4px;
+        font-size: 30px;
+    }
 }

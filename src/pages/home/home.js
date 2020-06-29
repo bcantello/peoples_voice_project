@@ -31,7 +31,7 @@ export default function Home() {
 			<div className={'intro-block'}>
 				<p className={'home-intro'}>Welcome to The People's Voice Project. A central location where users can
 					search government representatives,
-					discover upcoming local elections, and find polling locations - enjoy!</p>
+					discover upcoming local elections, and find polling locations. Enjoy!</p>
 			</div>
 			<div className={'content-block-2'}>
 				<h1 className={'block2-h1'}>Representative Search</h1>

@@ -1,14 +1,13 @@
 import React, {useContext} from "react";
-import {UniversalContext} from "../../App";
-import PollingLocationsList from "./pollingLocations/pollingLocationsList";
-import './votingLocations.css'
-import history from "../../history";
+import {UniversalContext} from "../../../App";
+import history from "../../../history";
+import '../votingLocations.css'
+import DropOffLocationsList from "./dropOffLocationsList";
 
-export default function VotingLocationDetails() {
+export default function DropOffLocationsDetails() {
 	const universalContext = useContext(UniversalContext);
 	const address = universalContext.pollingLocations.data.normalizedInput;
 	const earlyVoteArr = [];
-	const dropOffArr = [];
 	const pollingLocationsArr = [];
 
 	if (universalContext.pollingLocations.data.earlyVoteSites !== undefined) {
@@ -19,25 +18,10 @@ export default function VotingLocationDetails() {
 		);
 	}
 
-	if (universalContext.pollingLocations.data.dropOffLocations !== undefined) {
-		dropOffArr.push(
-			<div>
-				<span className={'voting-sites-link'} onClick={() => history.push('/dropOffSites')}>View Drop Off Locations</span>
-			</div>
-		);
-	}
-
-	if ((universalContext.pollingLocations.data.earlyVoteSites !== undefined) && (universalContext.pollingLocations.data.dropOffLocations !== undefined)) {
+	if (universalContext.pollingLocations.data.pollingLocations !== undefined) {
 		pollingLocationsArr.push(
 			<div>
 				<span className={'voting-sites-link'} onClick={() => history.push('/pollingLocations')}>View Polling Locations</span>
-			</div>
-		);
-	} else {
-		pollingLocationsArr.push(
-			<div>
-				<div className={'polling-locations-title'}>Polling Locations:</div>
-				<PollingLocationsList/>
 			</div>
 		);
 	}
@@ -48,9 +32,12 @@ export default function VotingLocationDetails() {
 				for {address.line1}, {address.city}, {address.zip}</div>
 			<div className={'election-name'}>{universalContext.pollingLocations.data.election.name}</div>
 			<div className={'election-day'}>Election day: {universalContext.pollingLocations.data.election.electionDay}</div>
-			{dropOffArr}
-			{earlyVoteArr}
-			{pollingLocationsArr}
+			<div className={'location-links-container'}>
+				{earlyVoteArr}
+				{pollingLocationsArr}
+			</div>
+			<div className={'polling-locations-title'}>Drop Off Locations:</div>
+			<DropOffLocationsList/>
 		</div>
 	);
 };

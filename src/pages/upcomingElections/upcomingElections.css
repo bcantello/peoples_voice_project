@@ -13,6 +13,11 @@
     padding: 1em;
 }
 
+#upcoming-elections-title {
+    font-size: 1.5em;
+    padding: 1em;
+}
+
 .upcoming-election-name {
     font-weight: bold;
     font-size: 1.0em;
