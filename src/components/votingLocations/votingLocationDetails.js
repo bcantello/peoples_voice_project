@@ -3,6 +3,7 @@ import {UniversalContext} from "../../App";
 import PollingLocationsList from "./pollingLocations/pollingLocationsList";
 import './votingLocations.css'
 import history from "../../history";
+import AdditionResourceDetails from "./additionalResources/additionalResourcesDetails";
 
 export default function VotingLocationDetails() {
 	const universalContext = useContext(UniversalContext);
@@ -51,6 +52,7 @@ export default function VotingLocationDetails() {
 			{dropOffArr}
 			{earlyVoteArr}
 			{pollingLocationsArr}
+			<AdditionResourceDetails/>
 		</div>
 	);
 };
