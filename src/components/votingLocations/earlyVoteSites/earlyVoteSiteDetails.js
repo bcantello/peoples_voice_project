@@ -13,7 +13,7 @@ export default function EarlyVoteSiteDetails() {
 	if (universalContext.pollingLocations.data.dropOffLocations !== undefined) {
 		dropOffArr.push(
 			<div>
-				<div className={'voting-sites-link'} onClick={() => history.push('/dropOffSites')}>View Drop Off Sites</div>
+				<span className={'voting-sites-link'} onClick={() => history.push('/dropOffSites')}>View Drop Off Sites</span>
 			</div>
 		);
 	}
@@ -21,7 +21,7 @@ export default function EarlyVoteSiteDetails() {
 	if (universalContext.pollingLocations.data.pollingLocations !== undefined) {
 		pollingLocationsArr.push(
 			<div>
-				<div className={'voting-sites-link'} onClick={() => history.push('/pollingLocations')}>View Polling Locations</div>
+				<span className={'voting-sites-link'} onClick={() => history.push('/pollingLocations')}>View Polling Locations</span>
 			</div>
 		);
 	}
