@@ -15,7 +15,7 @@ export default function PollingLocationsListItem(props) {
 	}
 
 	if (props.element.notes !== undefined) {
-		notes.push(address.notes);
+		notes.push(`Location: ${props.element.notes}`);
 	}
 
 	return (
@@ -24,9 +24,9 @@ export default function PollingLocationsListItem(props) {
 				<div className={'site-name'}>{address.locationName}</div>
 				<div>{address.line1}</div>
 				<div>{address.city}, {address.state} {address.zip}</div>
+				<div className={'polling-location-notes'}>{notes}</div>
 			</div>
 			<div className={'polling-location-hours'}>{hours}</div>
-			<div className={'polling-location-notes'}>{notes}</div>
 		</div>
 	);
 };

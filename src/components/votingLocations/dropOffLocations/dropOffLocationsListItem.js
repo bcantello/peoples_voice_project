@@ -16,7 +16,7 @@ export default function DropOffLocationsListItem(props) {
 	}
 
 	if (props.element.notes !== undefined) {
-		notes.push(address.notes);
+		notes.push(`Location: ${props.element.notes}`);
 	}
 
 	return (
@@ -25,10 +25,10 @@ export default function DropOffLocationsListItem(props) {
 				<div className={'site-name'}>{address.locationName}</div>
 				<div>{address.line1}</div>
 				<div>{address.city}, {address.state} {address.zip}</div>
+				<div className={'early-vote-location-notes'}>{notes}</div>
 			</div>
 			<div className={'early-vote-location-dates'}>From {props.element.startDate} to {props.element.endDate}</div>
 			<div className={'early-vote-location-hours'}>{hours}</div>
-			<div className={'early-vote-location-notes'}>{notes}</div>
 		</div>
 	);
 }

@@ -40,8 +40,13 @@
     padding-bottom: 1.5em;
 }
 
-.early-vote-location-notes {
-    padding-bottom: 1em;
+.early-vote-location-hours {
+    padding-bottom: 2em;
+}
+
+.early-vote-location-dates {
+    padding-top: .5em;
+    font-style: italic;
 }
 
 .polling-location-details {
@@ -49,5 +54,6 @@
 }
 
 .site-name {
-    font-weight: bold;;
+    font-weight: bold;
+    font-size: 1.15em;
 }
