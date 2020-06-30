@@ -13,8 +13,15 @@
     max-width: 800px;
 }
 
+.officials-intro {
+    font-size: 1.15em;
+    color: #5c5c5c;
+    padding-bottom: 0.5em;
+}
+
 .user-city {
     font-size: 1.5em;
+    color: #5c5c5c;
     padding-bottom: 1em;
 }
 
