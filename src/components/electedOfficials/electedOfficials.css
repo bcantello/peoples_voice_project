@@ -67,7 +67,6 @@
 }
 
 .official-name-container {
-    /* font-size: 1.25em; */
     padding-bottom: 1em;
 }
 
@@ -110,16 +109,26 @@
 
 #official-email {
     text-decoration: none;
-    color: #5c5c5c;
+    color: #197278;
     padding-top: 1%;
     padding-bottom: 1%;
 }
 
+#official-email:hover {
+    color: #5D9F9E;
+    border-bottom: #E09F3E solid 1px;
+}
+
 #official-website {
     text-decoration: none;
-    color: #5c5c5c;
+    color: #197278;
     padding-top: 1%;
     padding-bottom: 1%;
+}
+
+#official-website:hover {
+    color: #5D9F9E;
+    border-bottom: #E09F3E solid 1px;
 }
 
 #official-image {
@@ -141,7 +150,12 @@
 
 .official-social {
     text-decoration: none;
-    color: #5c5c5c;
+    color: #197278;
+}
+
+.official-social:hover {
+    color: #5D9F9E;
+    border-bottom: #E09F3E solid 1px;
 }
 
 @media(min-width: 768px) and (max-width: 1023px) {

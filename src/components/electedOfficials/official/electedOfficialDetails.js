@@ -19,7 +19,10 @@ export default function ElectedOfficialDetails() {
 	const officialData = [];
 
 	if (official.name !== undefined) {
-		officialName.push(<><div id={'official-name'}>{official.name}</div><div id={'official-party'}>{official.party}</div></>);
+		officialName.push(<>
+			<div id={'official-name'}>{official.name}</div>
+			<div id={'official-party'}>{official.party}</div>
+		</>);
 	}
 
 	if (official.photoUrl !== undefined) {
@@ -28,19 +31,25 @@ export default function ElectedOfficialDetails() {
 
 	if (official.address !== undefined) {
 		const address = official.address[0];
-		officialData.push(<div id={'official-address'}><img id={'officials-icon'} src={Address} alt={'address'}/>{address.line1}, {address.city} {address.state}, {address.zip}</div>);
+		officialData.push(<div id={'official-address'}><img id={'officials-icon'} src={Address}
+		                                                    alt={'address'}/>{address.line1}, {address.city} {address.state}, {address.zip}
+		</div>);
 	}
 
 	if (official.phones !== undefined) {
-		officialData.push(<div id={'official-phone'}><img id={'officials-icon'} src={Phone} alt={'phone'}/>{official.phones}</div>)
+		officialData.push(<div id={'official-phone'}><img id={'officials-icon'} src={Phone}
+		                                                  alt={'phone'}/>{official.phones}</div>)
 	}
 
 	if (official.emails !== undefined) {
-		officialData.push(<div id={'official-email'}><img id={'officials-icon'} src={Email} alt={'email'}/><a id={'official-email'} href={`mailto:${official.emails}`}>{official.emails}</a></div>);
+		officialData.push(<div id={'official-email'}><img id={'officials-icon'} src={Email} alt={'email'}/><a
+			id={'official-email'} href={`mailto:${official.emails}`}>{official.emails}</a></div>);
 	}
 
 	if (official.urls !== undefined) {
-		officialData.push(<div id={'official-website'}><img id={'officials-icon'} src={Website} alt={'website'}/><a id={'official-website'} href={official.urls} target="_blank" rel="nofollow noopener noreferrer">{official.urls}</a></div>);
+		officialData.push(<div><img id={'officials-icon'} src={Website} alt={'website'}/><a
+			id={'official-website'} href={official.urls} target="_blank"
+			rel="nofollow noopener noreferrer">{official.urls}</a></div>);
 	}
 
 	if (official.channels !== undefined) {
