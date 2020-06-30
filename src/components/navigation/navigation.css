@@ -5,17 +5,17 @@ nav {
     -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 0, 0, 0.1) inset;
     -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 0, 0, 0.1) inset;
     box-shadow:0 1px 4px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    background: transparent;
 }
 
 nav div {
     padding: 1em 1em;
     font-size: 1em;
-    color: #197278;
-    background: transparent;
+    color: #5E5D5D;
 }
 
 nav span:hover, nav span:visited {
-    color: #5D9F9E;
+    color: #5E5D5D;
     border-bottom: 2px solid #E09F3E;;
 }
 

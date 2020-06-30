@@ -23,7 +23,8 @@ export default function ElectedOfficialsList() {
 
 	return (
 		<div className={'officials-search-results-wrapper'}>
-			<div className={'user-city'}>Elected Officials For: {city} {state}, {zip}</div>
+			<div className={'officials-intro'}>Elected Officials for</div>
+				<div className={'user-city'}>{city} {state}, {zip}</div>
 			<div className={'elected-offices-wrapper'}>{electedOffices}</div>
 		</div>
 	);
