@@ -9,7 +9,6 @@ export default function VotingLocationDetails() {
 	const address = universalContext.pollingLocations.data.normalizedInput;
 	const earlyVoteArr = [];
 	const dropOffArr = [];
-	const pollingLocationsArr = [];
 
 	if (universalContext.pollingLocations.data.earlyVoteSites !== undefined) {
 		earlyVoteArr.push(
@@ -29,23 +28,6 @@ export default function VotingLocationDetails() {
 		);
 	}
 
-	if ((universalContext.pollingLocations.data.earlyVoteSites !== undefined)
-		&& (universalContext.pollingLocations.data.dropOffLocations !== undefined)) {
-		pollingLocationsArr.push(
-			<div>
-				<span className={'voting-sites-link'} onClick={() => history
-					.push('/pollingLocations')}>View Polling Locations</span>
-			</div>
-		);
-	} else {
-		pollingLocationsArr.push(
-			<div>
-				<div className={'polling-locations-title'}>Polling Locations:</div>
-				<PollingLocationsList/>
-			</div>
-		);
-	}
-
 	return (
 		<div className={'election-container'}>
 			<div className={'election-user-address'}>Upcoming elections
@@ -58,9 +40,10 @@ export default function VotingLocationDetails() {
 				.electionDay}</div>
 			{dropOffArr}
 			{earlyVoteArr}
-			{pollingLocationsArr}
 			<span className={'voting-sites-link'} onClick={() => history
 				.push('/additionalResources')}>Additional Resources</span>
+			<div className={'polling-locations-title'}>Polling Locations:</div>
+			<PollingLocationsList/>
 		</div>
 	);
 };
