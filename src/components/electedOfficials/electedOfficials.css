@@ -140,11 +140,7 @@
     border-bottom: #E09F3E solid 1px;
 }
 
-<<<<<<< HEAD
-#official-image {
-=======
 #official-image, #official-placeholder-image {
->>>>>>> 6e3d2dedbb92ae7beeee77322d2fdfdea40c1e15
     height: 20em;
     border-radius: 9px;
 }
