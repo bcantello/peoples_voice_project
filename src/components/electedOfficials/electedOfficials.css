@@ -7,6 +7,7 @@
     box-shadow: 20px 25px 13px -20px rgba(0,0,0,0.35);
     border-radius: 9px;
     padding-top: 2em;
+    overflow-wrap: break-word;
 }
 
 .office-search-results-wrapper {
@@ -60,13 +61,6 @@
     color: #5D9F9E;
     border-bottom: #E09F3E solid 1px;
 }
-
-/* .official-details-page {
-    background-image: url('../../assets/background.svg');
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-} */
 
 .official-details-wrapper {
     max-width: 1200px;
