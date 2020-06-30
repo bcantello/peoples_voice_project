@@ -85,11 +85,13 @@ export default function ElectedOfficialDetails() {
 	}
 
 	return (
-		<div className={'official-details-wrapper'}>
-			<div className={'official-name-container'}>{officialName}</div>
-			<div className={'official-details-container'}>
-				<div className={'official-Image-container'}>{officialImage}</div>
-				<div className={'official-details'}>{officialData}</div>
+		<div className={'official-details-page'}>
+			<div className={'official-details-wrapper'}>
+				<div className={'official-name-container'}>{officialName}</div>
+				<div className={'official-details-container'}>
+					<div className={'official-Image-container'}>{officialImage}</div>
+					<div className={'official-details'}>{officialData}</div>
+				</div>
 			</div>
 		</div>
 	);

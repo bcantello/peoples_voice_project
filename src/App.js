@@ -82,7 +82,6 @@ function App() {
                   <Main/>
               </UniversalContext.Provider>
           </div>
-          <Footer/>
       </div>
   );
 }
