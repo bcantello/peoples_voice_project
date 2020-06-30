@@ -8,8 +8,7 @@
     box-shadow: 20px 25px 13px -20px rgba(0,0,0,0.35);
     border-radius: 9px;
     padding-bottom: 1em;
-    /*noinspection CssInvalidPropertyValue*/
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
 }
 
 .election-user-address {
