@@ -140,9 +140,13 @@
     border-bottom: #E09F3E solid 1px;
 }
 
-#official-image {
+#official-image, #official-placeholder-image {
     height: 20em;
     border-radius: 9px;
+}
+
+#official-placeholder-image {
+    opacity: .5;
 }
 
 #officials-icon {
