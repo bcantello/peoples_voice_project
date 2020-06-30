@@ -18,18 +18,13 @@ export default function About() {
 					</div>
 					<p className="about-member">Shortly after graduating from the <a
 						href="https://www.physics.ucsb.edu/" target="_blank" rel="nofollow noopener noreferrer"
-						style={{textDecoration: 'none', color: '#197278'}}>University of California Santa Barbara</a> , I joined the
+						style={{textDecoration: 'none', color: '#197278'}}>University of California Santa Barbara</a> with a degree in Physics, Brandon joined the
 						engineering team at <a href="https://www.payjunction.com/payments/" target="_blank"
 						                       rel="nofollow noopener noreferrer"
 						                       style={{textDecoration: 'none', color: '#197278'}}>PayJunction</a> as a
-						software engineer. While there I further honed my skills as an engineer in a test driven
-						development environment, utilizing technologies like Java, Javascript, Angular.js and HTML/CSS.
-						In an effort to further grow my developer skill set I then enrolled in a software engineering
-						intensive boot camp through <a href="https://generalassemb.ly/" target="_blank"
-						                               rel="nofollow noopener noreferrer"
-						                               style={{textDecoration: 'none', color: '#197278'}}>General Assembly</a>. During the
-						boot camp I was able to add Python, Django, React, Node.js, Express, MongoDB, and PostgreSQL to
-						my repertoire. Currently I'm a software engineer based in Santa Barbara CA. I enjoy building
+						software engineer. While there he further honed his skills as an engineer in a test driven
+						development environment. He also has 5+ years of experience managing teams within the finance sector.
+						Currently he is a software engineer based in Santa Barbara CA who enjoys building
 						user centric applications and websites that are as intuitive as they are dynamic.</p>
 					<div className="social-links">
 						<div className="linkedin">

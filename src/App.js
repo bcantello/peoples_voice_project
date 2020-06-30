@@ -2,7 +2,6 @@ import React, {useState, createContext, useEffect} from 'react';
 import './App.css';
 import Main from "./components/main";
 import Header from "./components/navigation/header";
-import Footer from "./components/navigation/footer";
 import { getIPAddress } from './services/ip-api-helper';
 import { getUpcomingElections } from './services/civic-api-helper';
 

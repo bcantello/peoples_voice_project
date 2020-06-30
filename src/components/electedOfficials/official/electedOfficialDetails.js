@@ -1,6 +1,7 @@
 import React, {useContext} from "react";
 import {UniversalContext} from "../../../App";
 import '../electedOfficials.css';
+import Image from '../../../assets/profileImage.png';
 
 import Address from '../../../assets/icons/address.svg';
 import Phone from '../../../assets/icons/phone.svg';
@@ -27,6 +28,8 @@ export default function ElectedOfficialDetails() {
 
 	if (official.photoUrl !== undefined) {
 		officialImage.push(<img id={'official-image'} src={official.photoUrl} alt={`${official.name}`}/>);
+	} else {
+		officialImage.push(<img id={'official-placeholder-image'} src={Image} alt={`${official.name}`}/>);
 	}
 
 	if (official.address !== undefined) {
