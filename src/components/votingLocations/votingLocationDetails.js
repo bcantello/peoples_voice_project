@@ -56,11 +56,11 @@ export default function VotingLocationDetails() {
 				.data
 				.election
 				.electionDay}</div>
+			<span className={'voting-sites-link'} onClick={() => history
+				.push('/additionalResources')}>Additional Resources</span>
 			{dropOffArr}
 			{earlyVoteArr}
 			{pollingLocationsArr}
-			<span className={'voting-sites-link'} onClick={() => history
-				.push('/additionalResources')}>Additional Resources</span>
 		</div>
 	);
 };
