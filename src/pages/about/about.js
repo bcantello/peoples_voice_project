@@ -1,6 +1,9 @@
 import React from "react";
 import './about.css';
 
+import Brandon from '../../assets/team/brandon.svg';
+import Carly from '../../assets/team/carly.svg';
+
 export default function About() {
 	return (
 		<div id={'about-content'}>
@@ -10,8 +13,7 @@ export default function About() {
 				people, and for the people, must hear from the people! </p>
 			<div className="team-members">
 				<div className="member-1">
-					{/* <img className="headshot" src={Calendar} alt='Brandon'/> */}
-					<div className="member-photo"></div>
+					<div className="member-img"><img className={'member-photo'} src={Brandon} alt={'Brandon'}/></div>
 					<div className="member-content">
 						<h2 className="member-name">Brandon Cantello</h2>
 						<h3 className="member-title">Founder, Chief Engineer</h3>
@@ -45,15 +47,15 @@ export default function About() {
 
 
 				<div className="member-2">
-					{/* <img className="headshot" src={Calendar} alt='Carly'/> */}
-					<div className="member-photo"></div>
+					<div className="member-img"><img className={'member-photo'} src={Carly} alt={'Carly'}/></div>
 					<div className="member-content">
 						<h2 className="member-name">Carly Nicholson</h2>
 						<h3 className="member-title">User Interface</h3>
 					</div>
-					<p className="about-member">Taxidermy 90's man braid tumblr succulents literally paleo tote bag swag
-						meh salvia art party you probably haven't heard of them sartorial. Etsy franzen pork belly
-						williamsburg heirloom.</p>
+					<p className="about-member">Passionate, driven software engineer evolved from a former tech startup marketing manager focused on creatively solving problems.<br/><br/>
+					My multifaceted skills from years working in marketing sharpened the natural eye I have for design and details - providing a unique foundation when making the switch to software engineering.<br/><br/>
+					A catalyst for modernism, I leverage my love of learning and overall determination to facilitate innovation for leading technology professionals who strive to be dynamic and grow their business. My approach combines the flexible with the analytical — allowing for creativity with an emphasis on structure and implementation.
+					</p>
 					<div className="social-links">
 						<div className="linkedin">
 							<a href="https://www.linkedin.com/in/carlypnicholson/" target="_blank"
