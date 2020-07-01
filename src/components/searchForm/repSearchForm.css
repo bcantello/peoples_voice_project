@@ -61,12 +61,12 @@
 .address-form-button {
     color:#ffffff;
     font-family: Roboto, serif;
-    border: none;
+    background-color: #197278;
+    border: 1px solid #197278;
     border-radius: 5px;
     width: 45%;
     height: 15%;
     margin: 10px 5px 10px 5px;
-    background-color: #E09F3E;
     padding: 10px 10px;
     text-align: center;
     font-size: 1em;
