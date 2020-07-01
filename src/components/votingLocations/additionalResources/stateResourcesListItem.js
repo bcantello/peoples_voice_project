@@ -4,11 +4,8 @@ import Phone from '../../../assets/icons/phone.svg'
 import '../votingLocations.css';
 
 export default function StateResourcesListItem(props) {
-	console.log(props)
 	const stateResources = props.element.electionAdministrationBody;
-	console.log("STATE LEVEL",stateResources);
 	const localResources = props.element.local_jurisdiction.electionAdministrationBody;
-	console.log("LOCAL LEVEL",localResources);
 	const additionalResourceArr = [];
 	const localResourceArr = [];
 	const localOfficialsArr = [];

@@ -21,7 +21,6 @@ function App() {
         const result = sessionStorage.getItem('upcomingElections');
         return result ? JSON.parse(result) : {}
     });
-    console.log(pollingLocations);
 
     useEffect(() => {
         const getUserInfo = async () => {

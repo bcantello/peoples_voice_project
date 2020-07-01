@@ -6,7 +6,6 @@ export default function StateResourcesList() {
 	const universalContext = useContext(UniversalContext);
 	const data = universalContext.pollingLocations.data;
 	let stateResourcesArr = this;
-	console.log("DATA from resources",data.state[0].electionAdministrationBody)
 
 	if (data.state[0].electionAdministrationBody !== undefined) {
 		stateResourcesArr = data.state.map((e, index) => {
