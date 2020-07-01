@@ -47,7 +47,6 @@
 /* TEAM MEMBER CONTENT ITEMS */
 .member-photo {
     border-radius: 50%;
-    background-color: #A9A9A9;
     width: 55px;
     height: 55px;
     margin-top: 10px;
@@ -83,6 +82,8 @@ p.about-member {
     text-align: left;
     margin-top: 4px;
     margin-bottom: 18px;
+    font-size: 1em;
+    line-height: 1.35em;
 }
 
 .social-links {
@@ -176,6 +177,8 @@ p.about-member {
 
     p.about-member {
         margin: 20px;
+        font-size: 1em;
+        line-height: 1.35em;
     }
 
     .icon-social-github {
@@ -229,7 +232,8 @@ p.about-member {
         margin: 20px;
         margin-left: 50px;
         margin-right: 100px;
-        font-size: 20px;
+        font-size: 1em;
+        line-height: 1.35em;
     }
 
     .icon-social-github {
