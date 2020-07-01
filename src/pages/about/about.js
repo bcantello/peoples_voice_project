@@ -26,7 +26,7 @@ export default function About() {
 						                       style={{textDecoration: 'none', color: '#197278'}}>PayJunction</a> as a
 						software engineer. While there he further honed his skills as an engineer in a test driven
 						development environment.<br/><br/>
-						Prior to finding a passion for engineering and Physics, he spent over five years managing teams within the finance sector.<br/><br/>
+						Prior to discovering a passion for engineering and Physics, he spent over five years managing teams within the finance sector.<br/><br/>
 						Currently he is a software engineer based in Santa Barbara CA who enjoys building
 						user centric applications and websites that are as intuitive as they are dynamic.</p>
 					<div className="social-links">
