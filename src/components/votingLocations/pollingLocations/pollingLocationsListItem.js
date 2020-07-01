@@ -7,10 +7,13 @@ export default function PollingLocationsListItem(props) {
 
 	if (props.element.pollingHours !== undefined) {
 		const pollingHoursArr = props.element.pollingHours.split(';');
-		for (let i = 0; i < pollingHoursArr.length; i++) {
-			hours.push(
-				<div>{pollingHoursArr[i]}</div>
-			);
+		//Check that hours are included, not just days and dates
+		if (pollingHoursArr[0].length > 13) {
+			for (let i = 0; i < pollingHoursArr.length; i++) {
+				hours.push(
+					<div>{pollingHoursArr[i]}</div>
+				);
+			}
 		}
 	}
 
