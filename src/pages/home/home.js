@@ -8,17 +8,17 @@ export default function Home() {
 	const universalContext = useContext(UniversalContext);
 	const electionsList = universalContext.electionInfo;
 	const userIp = universalContext.userIpInfo;
-	let upcomingElection = '';
-	let electionDisplay = '';
+	let upcomingElection = [];
+	let electionDisplay = [];
 
 	if (electionsList.elections !== undefined) {
 		for (let i = 1; i < electionsList.elections.length; i++) {
 			let splitArr = electionsList.elections[i].ocdDivisionId.split(':')
 			if (userIp.region_code === splitArr[2].toUpperCase()) {
-				upcomingElection = electionsList.elections[i].name;
+				upcomingElection.push(<div>{electionsList.elections[i].name}</div>);
 			}
 		}
-		upcomingElection !== '' ? electionDisplay = upcomingElection : electionDisplay =
+		upcomingElection.length !== 0 ? electionDisplay = upcomingElection : electionDisplay =
 			`There are no upcoming elections for ${userIp.region}`;
 	}
 
