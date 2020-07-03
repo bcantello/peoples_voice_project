@@ -58,8 +58,8 @@
     background: #ffffff;
 }
 
-.address-form-button {
-    color:#ffffff;
+.address-form-rep-button, .address-form-poll-button {
+    color: #ffffff;
     font-family: Roboto, serif;
     background-color: #197278;
     border: 1px solid #197278;
@@ -78,9 +78,20 @@
     justify-content: center;
 }
 
-.address-form-button:hover {
+.address-form-poll-button {
+    color: #197278;
+    background-color: rgba(249, 247, 247, 0.9);
+    border: 2px solid #197278;
+}
+
+.address-form-rep-button:hover {
     cursor: pointer;
-    opacity: .90;
+    opacity: .80;
+}
+
+.address-form-poll-button:hover {
+    cursor: pointer;
+    background-color: #c8c8c8;
 }
 
 #home-form-btn-container {
@@ -148,7 +159,7 @@
         font-size: .9em;
     }
 
-    .address-form-button {
+    .address-form-rep-button, .address-form-poll-button {
         width: 150px;
     }
 

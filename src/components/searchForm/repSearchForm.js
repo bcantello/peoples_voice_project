@@ -88,10 +88,10 @@ export default function RepSearchForm() {
 						onChange={handleAddressChange} required
 					/>
 					<div id={'home-form-btn-container'}>
-						<button className="address-form-button"
+						<button className="address-form-rep-button"
 						        type="submit"
 						        onClick={handleSubmitReps}>Find Rep.</button>
-						<button className="address-form-button"
+						<button className="address-form-poll-button"
 						        type="submit"
 						        onClick={handleSubmitPolls}>See Elections</button>
 					</div>
