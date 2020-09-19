@@ -4,10 +4,17 @@ import './navigation.css'
 
 export default function Header() {
 	let userIp = JSON.parse(sessionStorage.getItem('userIp'));
-	let userState;
+	let userState = [];
 
 	if (userIp) {
-		userState = userIp.region_code.toLowerCase();
+		let state = userIp.region_code.toLowerCase();
+		userState.push(<a className={'nav-link'}
+		   href={`https://vote.gov/register/${state}`}
+		   target="_blank"
+		   rel="nofollow noopener noreferrer"
+		   style={{textDecoration: 'none'}}>
+			<div><span><b>Register to Vote</b></span></div>
+		</a>)
 	}
 
 	return (
@@ -19,13 +26,7 @@ export default function Header() {
 				<div><span>Upcoming Elections</span></div>
 			</Link>
 			{/*External Link in Nav to voter registration*/}
-			<a className={'nav-link'}
-			   href={`https://vote.gov/register/${userState}`}
-			   target="_blank"
-			   rel="nofollow noopener noreferrer"
-			   style={{textDecoration: 'none'}}>
-				<div><span><b>Register to Vote</b></span></div>
-			</a>
+			{userState}
 			<Link className={'nav-link'} to={'/about'} style={{textDecoration: 'none'}}>
 				<div><span>About</span></div>
 			</Link>
