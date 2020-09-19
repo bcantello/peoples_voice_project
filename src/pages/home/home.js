@@ -12,9 +12,6 @@ export default function Home() {
 	let electionDisplay = [];
 
 	if (electionsList.elections !== undefined) {
-
-		console.log('Elections', electionsList);
-
 		for (let i = 1; i < electionsList.elections.length; i++) {
 			let divisionArr = electionsList.elections[i].ocdDivisionId.split(':');
 			// Check for election in users state

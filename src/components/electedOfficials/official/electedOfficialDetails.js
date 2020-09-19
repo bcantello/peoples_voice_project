@@ -1,13 +1,12 @@
 import React, {useContext} from "react";
 import {UniversalContext} from "../../../App";
 import '../electedOfficials.css';
-import Image from '../../../assets/profileImage.png';
 
+import Image from '../../../assets/profileImage.png';
 import Address from '../../../assets/icons/address.svg';
 import Phone from '../../../assets/icons/phone.svg';
 import Website from '../../../assets/icons/website.svg';
 import Email from '../../../assets/icons/email.svg';
-
 import Facebook from '../../../assets/icons/facebook.svg';
 import Twitter from '../../../assets/icons/twitter.svg';
 import YouTube from '../../../assets/icons/youtube.svg';
@@ -39,8 +38,14 @@ export default function ElectedOfficialDetails() {
 	}
 
 	if (official.phones !== undefined) {
+		// Split phone number at spaces to access potential extension numbers and 'ext'
+		const phoneArray = official.phones[0].split(" ");
+		let officialPhone;
+		// Create phone touch to dial phone number based on presence of extension number.
+		phoneArray[2] !== undefined ? officialPhone = `tel:${phoneArray[0]} ${phoneArray[1]};ext:${phoneArray[3]}`
+									: officialPhone = `tel:${phoneArray[0]} ${phoneArray[1]}`;
 		officialData.push(<div id={'official-phone'}><img id={'officials-icon'} src={Phone}
-                                alt={'phone'}/><a href={`tel:${official.phones}`}>{official.phones}</a></div>)
+                                alt={'phone'}/><a href={`${officialPhone}`}>{official.phones}</a></div>);
 	}
 
 	if (official.emails !== undefined) {
