@@ -10,8 +10,6 @@ export default function Header() {
 		userState = userIp.region_code.toLowerCase();
 	}
 
-	console.log(userState);
-
 	return (
 		<nav>
 			<Link className={'nav-link'} to={'/'} style={{textDecoration: 'none'}}>
