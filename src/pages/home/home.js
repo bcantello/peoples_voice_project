@@ -12,13 +12,22 @@ export default function Home() {
 	let electionDisplay = [];
 
 	if (electionsList.elections !== undefined) {
-		for (let i = 1; i < electionsList.elections.length; i++) {
-			let splitArr = electionsList.elections[i].ocdDivisionId.split(':');
 
-			if (splitArr[2] !== undefined) {
-				if (userIp.region_code === splitArr[2].toUpperCase()) {
-					upcomingElection.push(<div>{electionsList.elections[i].name}</div>);
+		console.log('Elections', electionsList);
+
+		for (let i = 1; i < electionsList.elections.length; i++) {
+			let divisionArr = electionsList.elections[i].ocdDivisionId.split(':');
+
+			if (divisionArr[2] !== undefined) {
+				if (userIp.region_code === divisionArr[2].toUpperCase()) {
+					upcomingElection.push(
+						<div>{electionsList.elections[i].name} : {electionsList.elections[i].electionDay}</div>
+					);
 				}
+			} else if (divisionArr[1] === 'us' && divisionArr[2] === undefined) {
+				upcomingElection.push(
+					<div>{electionsList.elections[i].name} : {electionsList.elections[i].electionDay}</div>
+				);
 			}
 		}
 		upcomingElection.length !== 0 ? electionDisplay = upcomingElection : electionDisplay =
