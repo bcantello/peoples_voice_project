@@ -13,9 +13,12 @@ export default function Home() {
 
 	if (electionsList.elections !== undefined) {
 		for (let i = 1; i < electionsList.elections.length; i++) {
-			let splitArr = electionsList.elections[i].ocdDivisionId.split(':')
-			if (userIp.region_code === splitArr[2].toUpperCase()) {
-				upcomingElection.push(<div>{electionsList.elections[i].name}</div>);
+			let splitArr = electionsList.elections[i].ocdDivisionId.split(':');
+
+			if (splitArr[2] !== undefined) {
+				if (userIp.region_code === splitArr[2].toUpperCase()) {
+					upcomingElection.push(<div>{electionsList.elections[i].name}</div>);
+				}
 			}
 		}
 		upcomingElection.length !== 0 ? electionDisplay = upcomingElection : electionDisplay =
