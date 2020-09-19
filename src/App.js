@@ -68,7 +68,6 @@ function App() {
 
   return (
       <div className="App">
-          <Header/>
           <div className={'content'}>
               <UniversalContext.Provider value={
                   {
@@ -81,6 +80,7 @@ function App() {
                       addressFormatter
                   }
               }>
+                  <Header/>
                   <Main/>
               </UniversalContext.Provider>
           </div>
