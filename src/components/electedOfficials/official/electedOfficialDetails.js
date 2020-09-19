@@ -35,13 +35,12 @@ export default function ElectedOfficialDetails() {
 	if (official.address !== undefined) {
 		const address = official.address[0];
 		officialData.push(<div id={'official-address'}><img id={'officials-icon'} src={Address}
-		                                                    alt={'address'}/>{address.line1}, {address.city} {address.state}, {address.zip}
-		</div>);
+                                alt={'address'}/>{address.line1}, {address.city} {address.state}, {address.zip}</div>);
 	}
 
 	if (official.phones !== undefined) {
 		officialData.push(<div id={'official-phone'}><img id={'officials-icon'} src={Phone}
-		                                                  alt={'phone'}/>{official.phones}</div>)
+                                alt={'phone'}/><a href={`tel:${official.phones}`}>{official.phones}</a></div>)
 	}
 
 	if (official.emails !== undefined) {

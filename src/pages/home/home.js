@@ -17,13 +17,14 @@ export default function Home() {
 
 		for (let i = 1; i < electionsList.elections.length; i++) {
 			let divisionArr = electionsList.elections[i].ocdDivisionId.split(':');
-
+			// Check for election in users state
 			if (divisionArr[2] !== undefined) {
 				if (userIp.region_code === divisionArr[2].toUpperCase()) {
 					upcomingElection.push(
 						<div>{electionsList.elections[i].name} : {electionsList.elections[i].electionDay}</div>
 					);
 				}
+			// Check for national election
 			} else if (divisionArr[1] === 'us' && divisionArr[2] === undefined) {
 				upcomingElection.push(
 					<div>{electionsList.elections[i].name} : {electionsList.elections[i].electionDay}</div>
