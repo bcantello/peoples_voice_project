@@ -10,7 +10,7 @@ export default function PollingLocationsDetails() {
 	const earlyVoteArr = [];
 	const DropOffArr = [];
 
-	if (universalContext.pollingLocations.data.earlyVoteSites !== undefined) {
+	if (universalContext.pollingLocations.data.earlyVoteSites) {
 		earlyVoteArr.push(
 			<div>
 				<span className={'voting-sites-link'} onClick={() => history
@@ -19,7 +19,7 @@ export default function PollingLocationsDetails() {
 		);
 	}
 
-	if (universalContext.pollingLocations.data.dropOffLocations !== undefined) {
+	if (universalContext.pollingLocations.data.dropOffLocations) {
 		DropOffArr.push(
 			<div>
 				<span className={'voting-sites-link'} onClick={() => history

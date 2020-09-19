@@ -7,7 +7,7 @@ export default function DropOffLocationsList() {
 	const data = universalContext.pollingLocations.data;
 	let dropOffLocationsArr = this;
 
-	if (data.dropOffLocations !== undefined) {
+	if (data.dropOffLocations) {
 		dropOffLocationsArr = data.dropOffLocations.map((e, index) => {
 			return (
 				<DropOffLocationsListItem element={e} key={index}/>

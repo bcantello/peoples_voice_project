@@ -30,3 +30,11 @@ nav span:hover, nav span:visited {
 .footer a {
     text-decoration: none;
 }
+
+@media(max-width: 768px) {
+    nav div {
+        padding: .5em .5em;
+        font-size: 1em;
+        color: #5E5D5D;
+    }
+}

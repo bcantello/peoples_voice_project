@@ -10,7 +10,7 @@ export default function ElectedOfficialsList() {
 	let state = this;
 	let zip = this;
 
-	if (universalContext.officials.data !== undefined) {
+	if (universalContext.officials.data) {
 		city = data.normalizedInput.city;
 		state = data.normalizedInput.state;
 		zip = data.normalizedInput.zip;

@@ -16,7 +16,10 @@ function App() {
         const result = sessionStorage.getItem('pollingLocations');
         return result ? JSON.parse(result) : {}
     });
-    const [userIpInfo, setUserIpInfo] = useState({});
+    const [userIpInfo, setUserIpInfo] = useState(() => {
+        const result = sessionStorage.getItem('userIp');
+        return result ? JSON.parse(result) : {}
+    });
     const [electionInfo, setElectionInfo] = useState(() => {
         const result = sessionStorage.getItem('upcomingElections');
         return result ? JSON.parse(result) : {}
@@ -27,6 +30,7 @@ function App() {
             await getIPAddress().then(res => {
                 if (res.status === 200) {
                     setUserIpInfo(res.data);
+                    sessionStorage.setItem('userIp', JSON.stringify(res.data));
                 } else {
                     console.log("error retrieving user IP");
                 }

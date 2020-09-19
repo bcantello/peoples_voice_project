@@ -7,7 +7,7 @@ export default function EarlyVoteSitesList() {
 	const data = universalContext.pollingLocations.data;
 	let pollingLocationsArr = this;
 
-	if (data.earlyVoteSites !== undefined) {
+	if (data.earlyVoteSites) {
 		pollingLocationsArr = data.earlyVoteSites.map((e, index) => {
 			return (
 				<EarlyVoteSitesListItem element={e} key={index}/>

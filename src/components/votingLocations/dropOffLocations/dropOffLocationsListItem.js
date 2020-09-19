@@ -6,7 +6,7 @@ export default function DropOffLocationsListItem(props) {
 	const hours = [];
 	const notes = [];
 
-	if (props.element.pollingHours !== undefined) {
+	if (props.element.pollingHours) {
 		const pollingHoursArr = props.element.pollingHours.split('\n');
 		//Check that hours are included, not just days and dates
 		if (pollingHoursArr[0].length > 13) {
@@ -18,7 +18,7 @@ export default function DropOffLocationsListItem(props) {
 		}
 	}
 
-	if (props.element.notes !== undefined) {
+	if (props.element.notes) {
 		notes.push(`Location: ${props.element.notes}`);
 	}
 

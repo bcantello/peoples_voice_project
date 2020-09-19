@@ -10,9 +10,9 @@ export default function StateResourcesListItem(props) {
 	const localResourceArr = [];
 	const localOfficialsArr = [];
 
-	if (props.element.local_jurisdiction !== undefined) {
+	if (props.element.local_jurisdiction) {
 		localResources = props.element.local_jurisdiction.electionAdministrationBody;
-		if (localResources.electionInfoUrl !== undefined) {
+		if (localResources.electionInfoUrl) {
 			localResourceArr.push(
 				<div>
 					Election Information: <a href={localResources.electionInfoUrl}
@@ -22,7 +22,7 @@ export default function StateResourcesListItem(props) {
 				</div>
 			);
 		}
-		if (localResources.physicalAddress !== undefined) {
+		if (localResources.physicalAddress) {
 			localOfficialsArr.push(
 				<div>
 					<div>{localResources.physicalAddress.line1}</div>
@@ -30,7 +30,7 @@ export default function StateResourcesListItem(props) {
 				</div>
 			);
 		}
-		if (localResources.electionOfficials[0].emailAddress !== undefined) {
+		if (localResources.electionOfficials[0].emailAddress) {
 			localOfficialsArr.push(
 				<div><img src={Email} alt={'email'} id={'officials-icon'}/> <a
 					href={`mailto:${localResources.electionOfficials[0].emailAddress}`}
@@ -38,14 +38,14 @@ export default function StateResourcesListItem(props) {
 				</div>
 			);
 		}
-		if (localResources.electionOfficials[0].officePhoneNumber !== undefined) {
+		if (localResources.electionOfficials[0].officePhoneNumber) {
 			localOfficialsArr.push(
 				<div><img src={Phone}
 				          alt={'phone'}
 				          id={'officials-icon'}/> {localResources.electionOfficials[0].officePhoneNumber}</div>
 			);
 		}
-		if (localResources.electionOfficials[0] !== undefined) {
+		if (localResources.electionOfficials[0]) {
 			localResourceArr.push(
 				<div>
 					<div className={'resources-subtitle'}>Election Officials:</div>
@@ -55,9 +55,9 @@ export default function StateResourcesListItem(props) {
 		}
 	}
 
-	if (props.element.electionAdministrationBody !== undefined) {
+	if (props.element.electionAdministrationBody) {
 		stateResources = props.element.electionAdministrationBody;
-		if (stateResources.absenteeVotingInfoUrl !== undefined) {
+		if (stateResources.absenteeVotingInfoUrl) {
 			additionalResourceArr.push(
 				<div>Absentee Voting Information: <a href={stateResources.absenteeVotingInfoUrl}
 				                                     target={'_blank'}
@@ -66,7 +66,7 @@ export default function StateResourcesListItem(props) {
 				</div>
 			);
 		}
-		if (stateResources.ballotInfoUrl !== undefined) {
+		if (stateResources.ballotInfoUrl) {
 			additionalResourceArr.push(
 				<div>Ballot Information: <a href={stateResources.ballotInfoUrl}
 				                            target={'_blank'}
@@ -74,7 +74,7 @@ export default function StateResourcesListItem(props) {
 				                            className={'resources-link'}>{stateResources.ballotInfoUrl}</a></div>
 			);
 		}
-		if (stateResources.electionInfoUrl !== undefined) {
+		if (stateResources.electionInfoUrl) {
 			additionalResourceArr.push(
 				<div>Election Information: <a href={stateResources.electionInfoUrl}
 				                              target={'_blank'}
@@ -83,7 +83,7 @@ export default function StateResourcesListItem(props) {
 				</div>
 			);
 		}
-		if (stateResources.electionRegistrationConfirmationUrl !== undefined) {
+		if (stateResources.electionRegistrationConfirmationUrl) {
 			additionalResourceArr.push(
 				<div>Voter Registration Confirmation: <a href={stateResources.electionRegistrationConfirmationUrl}
 				                                         target={'_blank'}
@@ -92,7 +92,7 @@ export default function StateResourcesListItem(props) {
 				</div>
 			);
 		}
-		if (stateResources.electionRegistrationUrl !== undefined) {
+		if (stateResources.electionRegistrationUrl) {
 			additionalResourceArr.push(
 				<div>Voter Registration Information: <a href={stateResources.electionRegistrationUrl}
 				                                        target={'_blank'}
@@ -101,7 +101,7 @@ export default function StateResourcesListItem(props) {
 				</div>
 			);
 		}
-		if (stateResources.electionRulesUrl !== undefined) {
+		if (stateResources.electionRulesUrl) {
 			additionalResourceArr.push(
 				<div>Election Rules: <a href={stateResources.electionRulesUrl}
 				                        target={'_blank'}
@@ -110,7 +110,7 @@ export default function StateResourcesListItem(props) {
 				</div>
 			);
 		}
-		if (stateResources.votingLocationFinderUrl !== undefined) {
+		if (stateResources.votingLocationFinderUrl) {
 			additionalResourceArr.push(
 				<div>Voting Location Finder: <a href={stateResources.votingLocationFinderUrl}
 				                                target={'_blank'}

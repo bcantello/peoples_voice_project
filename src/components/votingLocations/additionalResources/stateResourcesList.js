@@ -7,7 +7,7 @@ export default function StateResourcesList() {
 	const data = universalContext.pollingLocations.data;
 	let stateResourcesArr = this;
 
-	if (data.state[0].electionAdministrationBody !== undefined) {
+	if (data.state[0].electionAdministrationBody) {
 		stateResourcesArr = data.state.map((e, index) => {
 			return (
 				<StateResourcesListItem element={e} key={index}/>

@@ -7,7 +7,7 @@ export default function PollingLocationsList() {
 	const data = universalContext.pollingLocations.data;
 	let pollingLocationsArr = this;
 
-	if (data.pollingLocations !== undefined) {
+	if (data.pollingLocations) {
 		pollingLocationsArr = data.pollingLocations.map((e, index) => {
 			return (
 				<PollingLocationsListItem element={e} key={index}/>
