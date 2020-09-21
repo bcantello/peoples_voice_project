@@ -6,10 +6,29 @@ import './navigation.css'
 export default function Header() {
 	const universalContext = useContext(UniversalContext);
 	let userState = universalContext.userIpInfo;
-	let state;
+	const registerToVote = [];
 
+	// Check for state in user ip info. If State, send to state specific registration page. If not, sed to generic.
 	if (userState.region_code) {
-		state = userState.region_code.toLowerCase();
+		let state = userState.region_code.toLowerCase();
+		registerToVote.push(
+			<a className={'nav-link'}
+			   href={`https://vote.gov/register/${state}`}
+			   target="_blank"
+			   rel="nofollow noopener noreferrer"
+			   style={{textDecoration: 'none'}}>
+				<div><span><b>Register to Vote</b></span></div>
+			</a>);
+	} else {
+		registerToVote.push(
+			<a className={'nav-link'}
+			   href={`https://vote.gov/`}
+			   target="_blank"
+			   rel="nofollow noopener noreferrer"
+			   style={{textDecoration: 'none'}}>
+				<div><span><b>Register to Vote</b></span></div>
+			</a>
+		);
 	}
 
 	return (
@@ -21,13 +40,7 @@ export default function Header() {
 				<div><span>Upcoming Elections</span></div>
 			</Link>
 			{/*External Link in Nav to voter registration*/}
-			<a className={'nav-link'}
-			   href={`https://vote.gov/register/${state}`}
-			   target="_blank"
-			   rel="nofollow noopener noreferrer"
-			   style={{textDecoration: 'none'}}>
-				<div><span><b>Register to Vote</b></span></div>
-			</a>
+			{registerToVote}
 			<Link className={'nav-link'} to={'/about'} style={{textDecoration: 'none'}}>
 				<div><span>About</span></div>
 			</Link>

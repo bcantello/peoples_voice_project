@@ -39,7 +39,7 @@ export default function RepSearchForm() {
 				history.push('/votingLocations');
 			} else {
 				document.getElementById('error-response')
-					.innerHTML = "Either an incorrect address was entered, or there are no upcoming elections for this location."
+					.innerHTML = "Either an incorrect address was entered, or we do not yet have details for upcoming elections for this location."
 			}
 		}).catch(e => {
 			return e;
