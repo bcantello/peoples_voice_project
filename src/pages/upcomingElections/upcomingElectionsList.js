@@ -14,6 +14,7 @@ export default function UpcomingElectionsList() {
 			sessionStorage.setItem('electionsList', JSON.stringify(electionsList));
 		}
 		else {
+			//redirect page through home to have universal context and session initiated
 			const needs_loading = true;
 			return (
 				<Home needs_loading={needs_loading}/>
