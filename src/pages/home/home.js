@@ -3,8 +3,9 @@ import RepSearchForm from "../../components/searchForm/repSearchForm";
 import {UniversalContext} from "../../App";
 import './home.css';
 import headerImage from '../../assets/draft-opaque.svg';
+import Loader from '../../components/loader/loader';
 
-export default function Home() {
+export default function Home(props) {
 	const universalContext = useContext(UniversalContext);
 	const electionsList = universalContext.electionInfo;
 	const userIp = universalContext.userIpInfo;
@@ -32,32 +33,40 @@ export default function Home() {
 			`There are no upcoming elections for ${userIp.region}`;
 	}
 
-	return (
-		<>
-			<h1 className={'home-h1'}>The People's Voice Project</h1>
-			<div className={'content-block-1'}>
-				<img id={'header-image'} src={headerImage} alt={'peace sign hands'}/>
-			</div>
-			<div className={'intro-block'}>
-				<p className={'home-intro'}>Welcome to The People's Voice Project. A central location where you can
-					search government representatives,
-					discover upcoming local elections, and find polling locations. Enjoy!</p>
-			</div>
-			<div className={'content-block-2'}>
-				<h1 className={'block2-h1'}>Representative Search</h1>
-				<div className={'upcoming'}>
-					<p className={'rep-intro'}><span style={{fontWeight: 'bold'}}>Here's How:</span> Enter your address
-						to find the contact information for the government representatives who have been elected to
-						serve you. If there is an upcoming election in your area, click <span
-							style={{fontWeight: 'bold'}}>See Elections</span> to view your voting locations and hours of
-						operation.</p>
-					<div id={'upcoming-details'}>
-						<p>Upcoming elections for {userIp.region}:</p>
-						<p>{electionDisplay}</p>
-					</div>
+	//If normal flow we load and display the home page
+	// Yet if users access a different route directly we want to redirect them through Home 
+	// to get all values required set but display a loading page and went back to the route page
+	if (props.needs_loading) {
+		return <Loader />
+	}
+	else {
+		return (
+			<>
+				<h1 className={'home-h1'}>The People's Voice Project</h1>
+				<div className={'content-block-1'}>
+					<img id={'header-image'} src={headerImage} alt={'peace sign hands'}/>
 				</div>
-				<RepSearchForm/>
-			</div>
-		</>
-	);
+				<div className={'intro-block'}>
+					<p className={'home-intro'}>Welcome to The People's Voice Project. A central location where you can
+						search government representatives,
+						discover upcoming local elections, and find polling locations. Enjoy!</p>
+				</div>
+				<div className={'content-block-2'}>
+					<h1 className={'block2-h1'}>Representative Search</h1>
+					<div className={'upcoming'}>
+						<p className={'rep-intro'}><span style={{fontWeight: 'bold'}}>Here's How:</span> Enter your address
+							to find the contact information for the government representatives who have been elected to
+							serve you. If there is an upcoming election in your area, click <span
+								style={{fontWeight: 'bold'}}>See Elections</span> to view your voting locations and hours of
+							operation.</p>
+						<div id={'upcoming-details'}>
+							<p>Upcoming elections for {userIp.region}:</p>
+							<p>{electionDisplay}</p>
+						</div>
+					</div>
+					<RepSearchForm/>
+				</div>
+			</>
+		);
+	}
 };
